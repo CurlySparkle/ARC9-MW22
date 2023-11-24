@@ -1,0 +1,31 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/mw22/m4/m4_mag_d"
+    "$bumpmap" "models/mw22/m4/m4_mag_n"
+    "$phongexponenttexture" "models/mw22/m4/m4_mag_e"
+
+    "$color2" "[10 10 10]"
+    "$blendtintbybasealpha" "1"
+    "$phong" "1"
+    "$phongboost" "0.3"
+    "$phongexponent" "14"
+    "$phongalbedotint" "0"              //enable for brushed metals
+    "$phongfresnelranges" "[1 0.5 0]"
+
+    "$basemapalphaenvmapmask" "1"
+    "$envmapfresnel" "1"
+
+    //enable these if viewing outside of MWB
+    //"$envmap" "env_cubemap"
+    //"$envmaptint" "[1 1 1]"
+
+    "Proxies"
+    {
+        "Arc9EnvMapTint"
+        {
+            "specularity" "0.5"             //0.25, 0.5, 0.75, 1
+            "min" "0"
+            "max" "0.1"                       //change this if too bright in game
+        }
+    }
+}
