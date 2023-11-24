@@ -1,0 +1,36 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models\mw22\lachman556\lachman_back_sight"
+    "$bumpmap" "models\mw22\lachman556\lachman_back_sight_n"
+    "$phongexponenttexture" "models\mw22\lachman556\lachman_back_sight_exp"
+
+    /////////////////
+    "$color2" "[0 0 0]"                                     //do not touch this
+    "$blendtintbybasealpha" "1"                             //do not touch this
+    /////////////////
+
+    "$phong" "1"
+    "$phongboost" "1"
+    "$phongalbedotint" "1"
+    "$phongalbedoboost" "10"                                //toy around with this
+    "$phongfresnelranges" "[1 0.1 0]"
+       
+    /////////////////
+    "$normalmapalphaenvmapmask" "1"                         //do not touch this
+    /////////////////
+
+    "$envmap"					"env_cubemap"
+    "$envmaptint"				"[ .13 .13 .13 ]"
+    "$envmapfresnel"			".25"
+    "$envmapcoefficient"		"[0.39 0.39 0.39]"                  
+
+     "Proxies"
+     {
+        "Arc9EnvMapTint"
+        {
+            "specularity" "0.5"
+            "min" "0"
+            "max" "0.2"
+        }
+     }
+}
