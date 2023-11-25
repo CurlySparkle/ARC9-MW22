@@ -3,7 +3,7 @@ AddCSLuaFile()
 SWEP.Base = "arc9_cod2019_base"
 
 SWEP.Spawnable = true
-SWEP.Category = "ARC9 - MW2019"
+SWEP.Category = "ARC9 - MWII"
 SWEP.SubCategory = "Shotguns"
 
 SWEP.PrintName = "Expedite 12"
@@ -20,7 +20,7 @@ SWEP.Trivia = {
 }
 
 SWEP.Credits = {
-    Author = "Twilight Sparkle/Firmeteran/Nekyo",
+    Author = "Twilight Sparkle//Nekyo-ko/Pacagma/Firmeteran",
     Assets = "Infinity Ward/Sledgehammer Games/Activision"
 }
 
@@ -361,7 +361,7 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "p12_sh_mike1014_reload_start_rotate.ogg", t = 0/30},
-			{s = path .. "p12_sh_mike1014_reload_start_loadshell.ogg", t = 16/30},
+			{s = path .. "p12_sh_mike1014_reload_start_loadshell.ogg", t = 19/30},
         },
     },
     ["reload_insert"] = {
@@ -379,7 +379,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "MW22.Expendite.ShellIn", t = 10/30},
+            {s = "MW22.Expendite.ShellIn", t = 14/30},
         },
     },
     ["reload_finish"] = {
@@ -404,7 +404,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p12_sh_mike1014_reload_end.ogg", t = 3/30},
+			{s = path .. "p12_sh_mike1014_reload_end.ogg", t = 1/30},
         },
     },
     ["reload_start_empty"] = {
@@ -431,12 +431,12 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "p12_sh_mike1014_reload_empty_chamber_start_rotate.ogg", t = 0/30},
-            {s = path .. "p12_sh_mike1014_reload_empty_chamber_start_arm.ogg", t = 15/30},
-            {s = path .. "p12_sh_mike1014_reload_empty_chamber_start_charge.ogg", t = 31/30},
+            {s = path .. "p12_sh_mike1014_reload_empty_chamber_start_arm.ogg", t = 13/30},
+            {s = path .. "p12_sh_mike1014_reload_empty_chamber_start_charge.ogg", t = 29/30},
             {s = path .. "p12_sh_mike1014_reload_empty_start_hand.ogg", t = 51/30},
             {s = path .. "p12_sh_mike1014_reload_empty_start_mvmnt.ogg", t = 55/30},
-            {s = path .. "p12_sh_mike1014_reload_empty_start_shell.ogg", t = 60/30},
-            {s = path .. "p12_sh_mike1014_reload_empty_start_loadshell.ogg", t = 71/30},
+            {s = path .. "p12_sh_mike1014_reload_empty_start_shell.ogg", t = 61/30},
+            {s = path .. "p12_sh_mike1014_reload_empty_start_loadshell.ogg", t = 72/30},
             
         },
     },
@@ -456,8 +456,8 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p12_sh_mike1014_reload_start_rotate.ogg", t = 0},
-            {s = path .. "p12_sh_mike1014_reload_start_loadshell.ogg", t = 7/30},
+            {s = path .. "p12_sh_mike1014_reload_fast_start_rotate.ogg", t = 0},
+            {s = path .. "p12_sh_mike1014_reload_fast_start_loadshell.ogg", t = 12/30},
         },
     },
     ["reload_insert_fast"] = {
@@ -475,7 +475,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "MW22.Expendite.ShellIn_Fast", t = 7/30},
+            {s = "MW22.Expendite.ShellIn_Fast", t = 8/30},
         },
     },
     ["reload_finish_fast"] = {
@@ -500,7 +500,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p12_sh_mike1014_reload_fast_end.ogg", t = 0/30},
+			{s = path .. "p12_sh_mike1014_reload_fast_end.ogg", t = 1/30},
         },
     },
     ["reload_start_fast_empty"] = {
@@ -549,6 +549,8 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "p12_sh_mike1014_raise.ogg", t = 0/30},
+            {s = path .. "p12_sh_mike1014_inspect_charge.ogg", t = 21/30},
+            {s = path .. "p12_sh_mike1014_reload_end.ogg", t = 25/30},
         },
     },
     ["draw"] = {
@@ -643,7 +645,7 @@ SWEP.Animations = {
 			{s = path .. "p12_sh_mike1014_inspect_turn.ogg", t = 79/30},
 			{s = path .. "p12_sh_mike1014_inspect_boltpull.ogg", t = 103/30},
 			{s = path .. "p12_sh_mike1014_inspect_shelleject.ogg", t = 100/30},
-			{s = path .. "p12_sh_mike1014_inspect_charge.ogg", t = 171/30},
+			{s = path .. "p12_sh_mike1014_inspect_charge.ogg", t = 170/30},
 			{s = path .. "p12_sh_mike1014_reload_fast_empty_chamber_start_loadshell.ogg", t = 184/30},
 			{s = path .. "p12_sh_mike1014_reload_fast_empty_chamber_start_boltrelease.ogg", t = 188/30},
 			{s = path .. "p12_sh_mike1014_inspect_end.ogg", t = 198/30},

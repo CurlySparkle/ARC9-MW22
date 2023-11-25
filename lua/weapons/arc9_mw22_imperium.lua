@@ -3,7 +3,7 @@ AddCSLuaFile()
 SWEP.Base = "arc9_cod2019_base"
 
 SWEP.Spawnable = true
-SWEP.Category = "ARC9 - MW2019"
+SWEP.Category = "ARC9 - MWII"
 SWEP.SubCategory = "Sniper Rifles"
 
 SWEP.PrintName = "FJX Imperium"
@@ -20,7 +20,7 @@ SWEP.Trivia = {
 }
 
 SWEP.Credits = {
-    Author = "Twilight Sparkle/Firmeteran",
+    Author = "Twilight Sparkle/Pacagma/Firmeteran",
     Assets = "Infinity Ward/Sledgehammer Games/Activision"
 }
 

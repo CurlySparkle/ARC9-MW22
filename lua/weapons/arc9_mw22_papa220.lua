@@ -3,15 +3,15 @@ AddCSLuaFile()
 SWEP.Base = "arc9_cod2019_base"
 
 SWEP.Spawnable = true
-SWEP.Category = "ARC9 - MW2022"
+SWEP.Category = "ARC9 - MWII"
 SWEP.SubCategory = "Handguns"
 
-SWEP.PrintName = "SIG Sauer P220"
+SWEP.PrintName = "P890"
 
 SWEP.Class = "Handguns"
 SWEP.Trivia = {
     ["Country of Origin"] = "United States",
-    ["Manufacturer"] = "SIG Sauer",
+    ["Manufacturer"] = "Bruen",
     ["Caliber"] = ".45 ACP",
     ["Weight (Loaded)"] = "3.45 kg",
     ["Projectile Weight"] = "62 gr",
@@ -20,11 +20,11 @@ SWEP.Trivia = {
 }
 
 SWEP.Credits = {
-    Author = "Pacagma/Twilight Sparkle",
+    Author = "Twilight Sparkle/Pacagma/Firmeteran",
     Assets = "Infinity Ward/Sledgehammer Games/Activision"
 }
 
-SWEP.Description = [[A fully automatic, all-purpose assault rifle. Control your shots and this weapon can be very effective at range.]]
+SWEP.Description = [[For close-quarters situations, the P890 semi-auto pistol takes advantage of accuracy, reliability, and a hard-hitting .45 Auto round. Subsonic Ammo hides kill skulls from the enemy team.]]
 
 SWEP.ViewModel = "models/pacagma/weapons/viewmodel_papa220.mdl"
 --SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"

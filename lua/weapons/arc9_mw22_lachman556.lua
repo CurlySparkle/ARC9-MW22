@@ -3,7 +3,7 @@ AddCSLuaFile()
 SWEP.Base = "arc9_cod2019_base"
 
 SWEP.Spawnable = true
-SWEP.Category = "ARC9 - MW2019"
+SWEP.Category = "ARC9 - MWII"
 SWEP.SubCategory = "Assault Rifles"
 
 SWEP.PrintName = "Lachmann-556"
@@ -11,6 +11,7 @@ SWEP.PrintName = "Lachmann-556"
 SWEP.Class = "Assault Rifle"
 SWEP.Trivia = {
     ["Country of Origin"] = "West Germany",
+    ["Manufacturer"] = "Lachmann & Meer",
     ["Caliber"] = "7.62×51mm NATO",
     ["Weight (Loaded)"] = "4.38 kg",
     ["Projectile Weight"] = "144 gr",
@@ -19,7 +20,7 @@ SWEP.Trivia = {
 }
 
 SWEP.Credits = {
-    Author = "Twilight Sparkle/Viper/Ma_rv/radpas1213/Firmeteran",
+    Author = "Twilight Sparkle/Viper/Ma_rv/radpas1213/Pacagma/Firmeteran",
     Assets = "Infinity Ward/Valve/New World Interactive"
 }
 

@@ -3,10 +3,10 @@ AddCSLuaFile()
 SWEP.Base = "arc9_cod2019_base"
 
 SWEP.Spawnable = true
-SWEP.Category = "ARC9 - MW2019"
+SWEP.Category = "ARC9 - MWII"
 SWEP.SubCategory = "Assault Rifles"
 
-SWEP.PrintName = "AR15"
+SWEP.PrintName = "M4"
 
 SWEP.Class = "Assault Rifle"
 SWEP.Trivia = {
@@ -20,11 +20,11 @@ SWEP.Trivia = {
 }
 
 SWEP.Credits = {
-    Author = "Twilight Sparkle/Firmeteran/nekyo/Aidenzappering/Kirloper",
+    Author = "Twilight Sparkle/Nekyo-ko/Aidenzappering/Kirloper/Pacagma/Firmeteran",
     Assets = "Infinity Ward/Sledgehammer Games/Activision"
 }
 
-SWEP.Description = [[A fully automatic, all-purpose assault rifle. Control your shots and this weapon can be very effective at range.]]
+SWEP.Description = [[The flagship rifle of the M4 Platform. This reliable workhorse is a jack-of-all-trades that performs well in most combat scenarios.]]
 
 SWEP.ViewModel = "models/weapons/mw22/c_rif_m4.mdl"
 SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
@@ -386,10 +386,10 @@ SWEP.Animations = {
         },
         EventTable = {
 			{s = path .. "p01_ar_mike4_reload_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_magout.ogg", t = 21/30},
-			{s = path .. "p01_ar_mike4_reload_maghit.ogg", t = 34/30},
-			{s = path .. "p01_ar_mike4_reload_magin.ogg", t = 40/30},
-			{s = path .. "p01_ar_mike4_reload_end.ogg", t = 53/30},
+			{s = path .. "p01_ar_mike4_reload_magout.ogg", t = 23/30},
+			{s = path .. "p01_ar_mike4_reload_maghit.ogg", t = 31/30},
+			{s = path .. "p01_ar_mike4_reload_magin.ogg", t = 37/30},
+			{s = path .. "p01_ar_mike4_reload_end.ogg", t = 57/30},
         },
     },
     ["reload_empty"] = {
@@ -422,10 +422,10 @@ SWEP.Animations = {
         EventTable = {
 			{s = path .. "p01_ar_mike4_reload_empty_lift.ogg", t = 0/30},
 			{s = path .. "p01_ar_mike4_reload_empty_magout.ogg", t = 8/30},
-			{s = path .. "p01_ar_mike4_reload_empty_maghit.ogg", t = 31/30},
+			{s = path .. "p01_ar_mike4_reload_empty_maghit.ogg", t = 34/30},
 			{s = path .. "p01_ar_mike4_reload_empty_magin.ogg", t = 40/30},
 			{s = path .. "p01_ar_mike4_reload_empty_charge.ogg", t = 53/30},
-			{s = path .. "p01_ar_mike4_reload_empty_end.ogg", t = 64/30},
+            {s = path .. "p01_ar_mike4_reload_empty_end.ogg", t = 54/30},
         },
     },
     ["reload_fast"] = {
@@ -457,9 +457,9 @@ SWEP.Animations = {
         },
         EventTable = {
 			{s = path .. "p01_ar_mike4_reload_fast_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_fast_magout.ogg", t = 11/30},
-			{s = path .. "p01_ar_mike4_reload_fast_magin.ogg", t = 28/30},
-			{s = path .. "p01_ar_mike4_reload_fast_end.ogg", t = 20/30},
+			{s = path .. "p01_ar_mike4_reload_fast_magout.ogg", t = 8/30},
+            {s = path .. "p01_ar_mike4_reload_fast_end.ogg", t = 20/30},
+			{s = path .. "p01_ar_mike4_reload_fast_magin.ogg", t = 24/30},
         },
     },
     ["reload_fast_empty"] = {
@@ -492,9 +492,9 @@ SWEP.Animations = {
         EventTable = {
 			{s = path .. "p01_ar_mike4_reload_empty_fast_lift.ogg", t = 0/30},
 			{s = path .. "p01_ar_mike4_reload_empty_fast_magout.ogg", t = 7/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_magin.ogg", t = 25/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_charge.ogg", t = 33/30},
-			{s = path .. "p01_ar_mike4_reload_empty_end.ogg", t = 47/30},
+			{s = path .. "p01_ar_mike4_reload_empty_fast_magin.ogg", t = 27/30},
+			{s = path .. "p01_ar_mike4_reload_empty_fast_charge.ogg", t = 36/30},
+			{s = path .. "p01_ar_mike4_reload_empty_fast_end.ogg", t = 43/30},
         },
     },
     ["reload_xmag"] = {
@@ -524,11 +524,11 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_magout.ogg", t = 21/30},
-			{s = path .. "p01_ar_mike4_reload_maghit.ogg", t = 34/30},
-			{s = path .. "p01_ar_mike4_reload_magin.ogg", t = 40/30},
-			{s = path .. "p01_ar_mike4_reload_end.ogg", t = 53/30},
+			{s = path .. "p01_ar_mike4_reload_xmag_lift.ogg", t = 0/30},
+			{s = path .. "p01_ar_mike4_reload_xmag_magout.ogg", t = 24/30},
+			{s = path .. "p01_ar_mike4_reload_xmag_maghit.ogg", t = 37/30},
+			{s = path .. "p01_ar_mike4_reload_xmag_magin.ogg", t = 43/30},
+			{s = path .. "p01_ar_mike4_reload_xmag_end.ogg", t = 59/30},
         },
     },
     ["reload_xmag_empty"] = {
@@ -559,12 +559,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_empty_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_empty_magout.ogg", t = 8/30},
-			{s = path .. "p01_ar_mike4_reload_empty_maghit.ogg", t = 31/30},
-			{s = path .. "p01_ar_mike4_reload_empty_magin.ogg", t = 40/30},
-			{s = path .. "p01_ar_mike4_reload_empty_charge.ogg", t = 53/30},
-			{s = path .. "p01_ar_mike4_reload_empty_end.ogg", t = 64/30},
+			{s = path .. "p01_ar_mike4_reload_empty_xmag_lift.ogg", t = 0/30},
+			{s = path .. "p01_ar_mike4_reload_empty_xmag_magout.ogg", t = 8/30},
+			{s = path .. "p01_ar_mike4_reload_empty_xmag_maghit.ogg", t = 40/30},
+			{s = path .. "p01_ar_mike4_reload_empty_xmag_magin.ogg", t = 46/30},
+            {s = path .. "p01_ar_mike4_reload_empty_xmag_end.ogg", t = 49/30},
+			{s = path .. "p01_ar_mike4_reload_empty_xmag_charge.ogg", t = 60/30},
         },
     },
     ["reload_xmag_fast"] = {
@@ -595,10 +595,10 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_fast_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_fast_magout.ogg", t = 11/30},
-			{s = path .. "p01_ar_mike4_reload_fast_magin.ogg", t = 28/30},
-			{s = path .. "p01_ar_mike4_reload_fast_end.ogg", t = 20/30},
+			{s = path .. "p01_ar_mike4_reload_fast_xmag_lift.ogg", t = 0/30},
+			{s = path .. "p01_ar_mike4_reload_fast_xmag_magout.ogg", t = 11/30},
+			{s = path .. "p01_ar_mike4_reload_fast_xmag_magin.ogg", t = 28/30},
+			{s = path .. "p01_ar_mike4_reload_fast_xmag_end.ogg", t = 20/30},
         },
     },
     ["reload_xmag_fast_empty"] = {
@@ -629,11 +629,11 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_empty_fast_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_magout.ogg", t = 7/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_magin.ogg", t = 25/30},
-			{s = path .. "p01_ar_mike4_reload_empty_fast_charge.ogg", t = 33/30},
-			{s = path .. "p01_ar_mike4_reload_empty_end.ogg", t = 47/30},
+			{s = path .. "p01_ar_mike4_reload_empty_fast_xmag_lift.ogg", t = 0/30},
+			{s = path .. "p01_ar_mike4_reload_empty_fast_xmag_magout.ogg", t = 7/30},
+			{s = path .. "p01_ar_mike4_reload_empty_fast_xmag_magin.ogg", t = 25/30},
+            {s = path .. "p01_ar_mike4_reload_empty_fast_xmag_end.ogg", t = 30/30},
+			{s = path .. "p01_ar_mike4_reload_empty_fast_xmag_charge.ogg", t = 33/30},
         },
     },
     ["reload_xmaglrg"] = {
@@ -805,8 +805,8 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
-            {s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 9/30},
-            {s = path .. "p01_ar_mike4_reload_end.ogg", t = 39/30},
+            {s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 12/30},
+            {s = path .. "p01_ar_mike4_reload_end.ogg", t = 30/30},
         },
     },
     ["draw"] = {
@@ -890,14 +890,14 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
-			{s = path .. "p01_ar_mike4_reload_magout.ogg", t = 20/30},
+			{s = path .. "p01_ar_mike4_reload_magout.ogg", t = 19/30},
 			{s = path .. "p01_ar_mike4_reload_maghit.ogg", t = 52/30},
 			{s = path .. "p01_ar_mike4_reload_magin.ogg", t = 60/30},
 			{s = path .. "p01_ar_mike4_inspect_rotate.ogg", t = 71/30},
-			{s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 89/30},
+			{s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 87/30},
 			{s = path .. "p01_ar_mike4_inspect_boltclose.ogg", t = 110/30},
 			{s = path .. "p01_ar_mike4_inspect_hit.ogg", t = 119/30},
-			{s = path .. "p01_ar_mike4_inspect_end.ogg", t = 127/30},
+			{s = path .. "p01_ar_mike4_inspect_end.ogg", t = 131/30},
         },
     },
     ["bash"] = {
