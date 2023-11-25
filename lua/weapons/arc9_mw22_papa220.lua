@@ -895,6 +895,44 @@ SWEP.Animations = {
 			{s = path .. "p01_ar_mike4_inspect_end.ogg", t = 127/30},
         },
     },
+	["inspect_empty"] = {
+        Source = "lookat01_empty",
+        MinProgress = 0.1,
+        FireASAP = true,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+        EventTable = {
+            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
+			{s = path .. "p01_ar_mike4_reload_magout.ogg", t = 20/30},
+			{s = path .. "p01_ar_mike4_reload_maghit.ogg", t = 52/30},
+			{s = path .. "p01_ar_mike4_reload_magin.ogg", t = 60/30},
+			{s = path .. "p01_ar_mike4_inspect_rotate.ogg", t = 71/30},
+			{s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 89/30},
+			{s = path .. "p01_ar_mike4_inspect_boltclose.ogg", t = 110/30},
+			{s = path .. "p01_ar_mike4_inspect_hit.ogg", t = 119/30},
+			{s = path .. "p01_ar_mike4_inspect_end.ogg", t = 127/30},
+        },
+    },
     ["bash"] = {
         Source = {"melee", "melee2", "melee3"},
         IKTimeLine = {
