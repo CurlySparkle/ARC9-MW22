@@ -272,7 +272,7 @@ SWEP.DropMagazineAng = Angle(0, -90, 0)
 
 -------------------------- SOUNDS
 
-local path = "weapons/mw22/m4/"
+local path = "weapons/mw22/papa220/"
 
 SWEP.ShootSound = "MW22.M4A1.Fire"
 SWEP.ShootSoundIndoor = "MW22.M4A1.Fire"
@@ -299,36 +299,14 @@ SWEP.EnterSightsSound = path .. "wfoly_ar_mike4_ads_up.ogg"
 SWEP.ExitSightsSound = path .. "wfoly_ar_mike4_ads_down.ogg"
 
 SWEP.BulletBones = {
-    [1] = "j_bullet_01",
-    [2] = "j_bullet_02",
-    [3] = "j_bullet_03",
-    [4] = "j_bullet_04",
-    [5] = "j_bullet_05",
-    [6] = "j_bullet_06",
-    [7] = "j_bullet_07",
-    [8] = "j_bullet_08",
-    [9] = "j_bullet_09",
-    [10] = "j_bullet_11",
-    [11] = "j_bullet_12",
-    [12] = "j_bullet_13",
-    [13] = "j_bullet_14",
-    [14] = "j_bullet_15",
-    [15] = "j_bullet_16",
-    [16] = "j_bullet_17",
-    [17] = "j_bullet_18",
-    [18] = "j_bullet_19",
-    [19] = "j_bullet_20",
-    [20] = "j_bullet_21",
-    [21] = "j_bullet_22",
-    [22] = "j_bullet_23",
-    [23] = "j_bullet_23",
-    [24] = "j_bullet_24",
-    [25] = "j_bullet_25",
-    [26] = "j_bullet_26",
-    [27] = "j_bullet_27",
-    [28] = "j_bullet_28",
-    [29] = "j_bullet_29",
-    [30] = "j_bullet_30",
+    [1] = "j_ammo_01",
+    [2] = "j_ammo_02",
+    [3] = "j_ammo_03",
+    [4] = "j_ammo_04",
+    [5] = "j_ammo_05",
+    [6] = "j_ammo_06",
+    [7] = "j_ammo_07",
+    [8] = "j_ammo_08",
 }
 
 SWEP.HideBones  = {
@@ -354,7 +332,7 @@ SWEP.Animations = {
         },
     },
     ["reload"] = {
-        Source = "reload_half",
+        Source = "reload",
 		MinProgress = 0.8,
 		FireASAP = true,
         IKTimeLine = {
@@ -1052,56 +1030,6 @@ SWEP.AttachmentElements = {
     ["body_none"] = {
         Bodygroups = {
             {0,1},
-        },
-    },
-    ["mag_none"] = {
-        Bodygroups = {
-            {1,1},
-        },
-    },
-    ["pistol_grip_none"] = {
-        Bodygroups = {
-            {2,1},
-        },
-    },
-    ["muzzle_none"] = {
-        Bodygroups = {
-            {3,1},
-        },
-    },
-    ["barrel_none"] = {
-        Bodygroups = {
-            {4,1},
-        },
-    },
-    ["sight_rear_folded"] = {
-        Bodygroups = {
-            {5,1},
-        },
-    },
-    ["sight_front_folded"] = {
-        Bodygroups = {
-            {6,1},
-        },
-    },
-    ["sight_rear_off"] = {
-        Bodygroups = {
-            {5,2},
-        },
-    },
-    ["sight_front_off"] = {
-        Bodygroups = {
-            {6,2},
-        },
-    },
-    ["stock_none"] = {
-        Bodygroups = {
-            {7,1},
-        },
-    },
-    ["stock_main_none"] = {
-        Bodygroups = {
-            {8,1},
         },
     },
 }
