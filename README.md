@@ -7,7 +7,7 @@ Weapon pack from Call of Duty: Modern Warfare II. There might be a lot of change
 ## Required Items
  - **ARC9** (which needs to be installed in order to make this pack work and serves as the main weapon base):
 https://github.com/HaodongMo/ARC-9
- - **[ARC9] Call of Duty: Modern Warfare** (must install, serves as the foundation to make this weapon pack works):
+ - **[ARC9] Call of Duty: Modern Warfare** (must install, serves as the foundation to make this weapon pack work):
 https://github.com/CurlySparkle/ARC9-COD2019
- - **[ARC9] Call of Duty: Modern Warfare Shared** (must install, serves as the main universal attachments for MW2019 pack):
+ - **[ARC9] Call of Duty: Modern Warfare Shared** (must install, serves as the main universal attachments for the MW2019 pack, and also this pack):
 https://github.com/CurlySparkle/ARC9_Cod2019_Shared
