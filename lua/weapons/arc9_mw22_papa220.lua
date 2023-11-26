@@ -12,11 +12,11 @@ SWEP.Class = "Handguns"
 SWEP.Trivia = {
     ["Country of Origin"] = "United States",
     ["Manufacturer"] = "Bruen",
-    ["Caliber"] = ".45 ACP",
-    ["Weight (Loaded)"] = "3.45 kg",
-    ["Projectile Weight"] = "62 gr",
-    ["Muzzle Velocity"] = "2,986 ft/s",
-    ["Muzzle Energy"] = "1,665 joules"
+    ["Caliber"] = ".45 Auto",
+    --["Weight (Loaded)"] = "3.45 kg",
+    --["Projectile Weight"] = "62 gr",
+    --["Muzzle Velocity"] = "2,986 ft/s",
+    --["Muzzle Energy"] = "1,665 joules"
 }
 
 SWEP.Credits = {
@@ -33,7 +33,7 @@ SWEP.Slot = 2
 
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
-SWEP.WorldModelMirror = "models/weapons/mw22/c_rif_m4.mdl"
+SWEP.WorldModelMirror = "models/pacagma/weapons/viewmodel_papa220.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-12, 6, -7.5),
     Ang = Angle(-5, 0, 180),
@@ -44,8 +44,8 @@ SWEP.WorldModelOffset = {
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 28 -- Damage done at point blank range
-SWEP.DamageMin = 18 -- Damage done at maximum range
+SWEP.DamageMax = 62 -- Damage done at point blank range
+SWEP.DamageMin = 48 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
@@ -67,9 +67,9 @@ SWEP.PhysBulletDrag = 1.15
 
 SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
-SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 30 -- Self-explanatory.
-SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
+SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
+SWEP.ClipSize = 8 -- Self-explanatory.
+SWEP.SupplyLimit = 16 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 10 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
@@ -78,7 +78,7 @@ SWEP.Crosshair = true
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 824
+SWEP.RPM = 286
 
 SWEP.Firemodes = {
     {
@@ -253,6 +253,7 @@ SWEP.ShellModel = "models/weapons/cod2019/shared/shell_762_hr.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 SWEP.ShellScale = 0.06
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
+SWEP.CaseEffectQCA = 3
 
 SWEP.ShouldDropMag = false
 SWEP.ShouldDropMagEmpty = false
@@ -267,7 +268,7 @@ SWEP.DropMagazineSounds = {
 }
 SWEP.DropMagazineAmount = 1 -- Amount of mags to drop.
 SWEP.DropMagazineTime = 0.4
-SWEP.DropMagazineQCA = 3
+SWEP.DropMagazineQCA = 6
 SWEP.DropMagazineAng = Angle(0, -90, 0)
 
 -------------------------- SOUNDS
@@ -973,67 +974,6 @@ SWEP.Hook_TranslateAnimation = function (wep, anim)
     end
 end
 
-SWEP.DefaultBodygroups = "00000000000000"
-
-SWEP.AttachmentTableOverrides = {
-    ["arc9_stat_proscreen_main"] = {
-    ModelOffset = Vector(15.8, -0.6, 0),
-	ModelAngleOffset = Angle(0, 0, 0),
-	Scale = 0.9,
-    },
-    ["go_grip_angled"] = {
-    ModelOffset = Vector(0.7, 0, 0),
-    },
-    ["cod2019_grips_alt_cclamp"] = {
-	ModelOffset = Vector(-1, -0.1, 0.8),
-	ModelAngleOffset = Angle(0, 0, 180),
-    },
-    ["csgo_cod2019_laser_01"] = {
-    Sights = {
-    {
-        Pos = Vector(2, 19, -1.3),
-        Ang = Angle(0, 0, -45),
-        ViewModelFOV = 54,
-        Magnification = 1.25,
-        IgnoreExtra = false,
-		KeepBaseIrons = true,
-    },
-    },
-    },
-    ["csgo_cod2019_laser_02"] = {
-    Sights = {
-    {
-        Pos = Vector(2, 19, -1.3),
-        Ang = Angle(0, 0, -45),
-        ViewModelFOV = 54,
-        Magnification = 1.25,
-        IgnoreExtra = false,
-		KeepBaseIrons = true,
-    },
-    },
-    },
-    ["csgo_cod2019_laser_03"] = {
-    Sights = {
-    {
-        Pos = Vector(2, 19, -1.3),
-        Ang = Angle(0, 0, -45),
-        ViewModelFOV = 54,
-        Magnification = 1.25,
-        IgnoreExtra = false,
-		KeepBaseIrons = true,
-    },
-    },
-    },
-}
-
-SWEP.AttachmentElements = {
-    ["body_none"] = {
-        Bodygroups = {
-            {0,1},
-        },
-    },
-}
-
 -- SWEP.Hook_ModifyBodygroups = function(wep, data)
     -- local model = data.model
 	-- local attached = data.elements
@@ -1054,124 +994,64 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Barrels",
-        DefaultAttName = "Standard Barrel",
-        Category = "mw22_m4_barrel",
-        Bone = "tag_barrel_attach",
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-		Icon_Offset = Vector(2, 0, -1),
-    },
-    {
-        PrintName = "Optics",
-        Bone = "tag_holo",
-        Pos = Vector(1.5, 0, -0.1),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod2019_optic","cod2019_sights_m4"},
-        CorrectiveAng = Angle(0, 0, 0),
-		InstalledElements = {"sight_rear_folded","sight_front_folded"},
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Category = "cod2019_muzzle",
-        Bone = "tag_silencer",
-        Pos = Vector(0, 0, -1.15),
-        Ang = Angle(0, 0, 0),
-		InstalledElements = {"muzzle_none"},
-		Scale = 1,
-    },
-    {
-        PrintName = "Tactical",
-        DefaultAttName = "Default",
-        Category = "cod2019_tac",
-        Bone = "tag_laser_attach",
-        Pos = Vector(6.7, 0.97, -2.5),
-        Ang = Angle(0, 0, -90),
-    },
-    {
-        PrintName = "Grips",
-        DefaultAttName = "Default",
-        Category = {"cod2019_grip","cod2019_grip_cclamp"},
-        Bone = "tag_grip_attach",
-        Pos = Vector(-1, 0, -1.5),
-        Ang = Angle(0, 0, 180),
-		Scale = 1,
-    },
-    {
-        PrintName = "Stock",
-        DefaultAttName = "Standard Stock",
-        Category = {"cod2019_tube"},
-        Bone = "tag_stock_attach",
-        Pos = Vector(0.5, 0, 0),
-        Ang = Angle(0, 0, 0),
-		InstalledElements = {"stock_none","stock_main_none"},
-    },
-    {
-        PrintName = "Ammo",
-        Bone = "j_mag1",
-        Category = {"cod2019_ammo"},
-        Pos = Vector(0, 0, -1.5),
-        Ang = Angle(0, 0, 0),
-    },
-    {
         PrintName = "Mag",
 		Bone = "j_mag1",
-        Category = {"cod2019_mag"},
+        --Category = {"cod2019_mag"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
-    {
-        PrintName = "Perk",
-        Category = {"cod2019_perks","cod2019_perks_soh","cod2019_perks_burst"}
-    },
-    {
-        PrintName = "Skins",
-        --Bone = "v_weapon.Clip",
-        Category = "cod2019_skins_m4",
-		CosmeticOnly = true,
-    },
-    {
-        PrintName = "Cosmetic",
-        Category = {"universal_camo"},
-        CosmeticOnly = true,
-    },
-    {
-        PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/rif_m4_decal_a.mdl",
-        Category = "stickers",
-    },
-    {
-        PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/rif_m4_decal_b.mdl",
-        Category = "stickers",
-    },
-    {
-        PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/rif_m4_decal_c.mdl",
-        Category = "stickers",
-    },
-    {
-        PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/rif_m4_decal_d.mdl",
-        Category = "stickers",
-    },
-    {
-        PrintName = "Charm",
-        Category = "charm",
-        Bone = "tag_sling",
-        Pos = Vector(3.5, -1.2, -0.5),
+	{
+        PrintName = "Silencer",
+		Bone = "tag_silencer",
+        --Category = {"cod2019_mag"},
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-		Scale = 1.5,
     },
-    {
-        PrintName = "Stats",
-        Category = {"killcounter","killcounter2"},
-        Bone = "tag_sling",
-        Pos = Vector(2, -1.3, 0.55),
+	{
+        PrintName = "Trigger",
+		Bone = "j_trigger",
+		Installed = "mw22_papa220_triggers",
+		Integral = "mw22_papa220_triggers",
+        Category = {"mw22_papa220_triggers"},
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-		CosmeticOnly = true,
     },
+	{
+        PrintName = "Laser",
+		Bone = "tag_laser_attach",
+        --Category = {"cod2019_mag"},
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
+	{
+        PrintName = "Hammer",
+		Bone = "j_hammer",
+        --Category = {"cod2019_mag"},
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
+	{
+        PrintName = "Grip",
+		Bone = "tag_pistolgrip_attach",
+        --Category = {"cod2019_mag"},
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
+	{
+        PrintName = "Barrel",
+		Bone = "tag_barrel_attach",
+        --Category = {"cod2019_mag"},
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
+	{
+        PrintName = "Optics",
+		Bone = "tag_reflex",
+        --Category = {"cod2019_mag"},
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
+	
 }
 
 SWEP.GripPoseParam = 0.4
