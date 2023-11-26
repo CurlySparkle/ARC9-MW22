@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models\mw22\lachman556\762\lachmann_762_sight_glow_rgb"
+    "$additive"    "1"
+}

@@ -6,13 +6,13 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - MWII"
 SWEP.SubCategory = "Assault Rifles"
 
-SWEP.PrintName = "Lachmann-556"
+SWEP.PrintName = "Lachmann-762"
 
 SWEP.Class = "Assault Rifle"
 SWEP.Trivia = {
     ["Country of Origin"] = "West Germany",
     ["Manufacturer"] = "Lachmann & Meer",
-    ["Caliber"] = "7.62×51mm NATO",
+    ["Caliber"] = "7.62 NATO",
     ["Weight (Loaded)"] = "4.38 kg",
     ["Projectile Weight"] = "144 gr",
     ["Muzzle Velocity"] = "2,625 ft/s",
@@ -24,16 +24,16 @@ SWEP.Credits = {
     Assets = "Infinity Ward/Valve/New World Interactive"
 }
 
-SWEP.Description = [[The Lachmann-556 is the keystone in the Lachmann Meer Arsenal. An adaptive 5.56 weapon system that bridges the gap between submachine guns and full powered rifles.]]
+SWEP.Description = [[A delayed blowback 7.62 receiver with equal parts power and control. Select fire allows precise semi-auto shots and short bursts of devastating full-auto firepower.]]
 
-SWEP.ViewModel = "models/weapons/mw22/c_rif_g3.mdl"
+SWEP.ViewModel = "models/weapons/mw22/c_rif_lachmann_762.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 
 SWEP.Slot = 2
 
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
-SWEP.WorldModelMirror = "models/weapons/mw22/c_rif_g3.mdl"
+SWEP.WorldModelMirror = "models/weapons/mw22/c_rif_lachmann_762.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-9.5, 6.2, -5.5),
     Ang = Angle(-7, 0, 180),
@@ -44,8 +44,8 @@ SWEP.WorldModelOffset = {
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 31 -- Damage done at point blank range
-SWEP.DamageMin = 21 -- Damage done at maximum range
+SWEP.DamageMax = 36 -- Damage done at point blank range
+SWEP.DamageMin = 28 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
@@ -78,7 +78,7 @@ SWEP.Crosshair = true
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 723
+SWEP.RPM = 612
 
 SWEP.Firemodes = {
     {
@@ -96,7 +96,7 @@ SWEP.Firemodes = {
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 1.25
+SWEP.Recoil = 1.3
 
 SWEP.RecoilSeed = 213654
 
@@ -116,7 +116,7 @@ SWEP.RecoilResetTime = 0 -- How long the gun must go before the recoil pattern s
 
 SWEP.RecoilAutoControl = 1 -- Multiplier for automatic recoil control.
 
-SWEP.RecoilKick = 1
+SWEP.RecoilKick = 1.5
 
 SWEP.RecoilMultCrouch = 0.85
 SWEP.RecoilMultMove = 1.25
@@ -129,7 +129,7 @@ SWEP.VisualRecoilPunch = 2
 SWEP.VisualRecoilUp = 0.2
 
 SWEP.VisualRecoilMultSights = 1
-SWEP.VisualRecoilPunchSights = 15
+SWEP.VisualRecoilPunchSights = 5
 SWEP.VisualRecoilSideSights = 0
 
 SWEP.VisualRecoilRoll = 5
@@ -493,7 +493,7 @@ SWEP.Animations = {
         },
     },
     ["reload_xmag"] = {
-        Source = "reload",
+        Source = "reload_xmag",
         IKTimeLine = {
             {
                 t = 0,
@@ -526,8 +526,8 @@ SWEP.Animations = {
 			{s = path .. "wfoly_plr_ar_falima_reload_xmag_end.ogg", t = 63/30},
         },
     },
-    ["reload_xmag_xmags"] = {
-        Source = "reload_empty_xmags",
+    ["reload_xmag_empty"] = {
+        Source = "reload_xmag_empty",
 		DropMagAt = 1.4,
         IKTimeLine = {
             {
@@ -563,7 +563,7 @@ SWEP.Animations = {
         },
     },
     ["reload_xmag_fast"] = {
-        Source = "reload_fast_xmags",
+        Source = "reload_xmag_fast",
 		DropMagAt = 0.9,
         IKTimeLine = {
             {
@@ -597,7 +597,7 @@ SWEP.Animations = {
         },
     },
     ["reload_xmag_fast_empty"] = {
-        Source = "reload_fast_empty_xmags",
+        Source = "reload_xmag_fast_empty",
 		DropMagAt = 0.9,
         IKTimeLine = {
             {
@@ -875,6 +875,31 @@ SWEP.AttachmentElements = {
             {1,1},
         },
     },
+    ["barrel_none"] = {
+        Bodygroups = {
+            {2,1},
+        },
+    },
+    ["muzzle_none"] = {
+        Bodygroups = {
+            {3,1},
+        },
+    },
+    ["pistol_grip_none"] = {
+        Bodygroups = {
+            {4,1},
+        },
+    },
+    ["stock_attach"] = {
+        Bodygroups = {
+            {5,1},
+        },
+    },
+    ["stock_none"] = {
+        Bodygroups = {
+            {5,2},
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
@@ -928,7 +953,7 @@ SWEP.Attachments = {
         DefaultAttName = "Default",
         Category = "cod2019_grip",
         Bone = "tag_grip_attach",
-        Pos = Vector(1.5, 0, 0),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 180),
 		Scale = 1,
 		InstalledElements = {"rail_grip"},
@@ -948,7 +973,7 @@ SWEP.Attachments = {
         PrintName = "Reciever",
         DefaultAttName = "Standard",
         Category = {"cod2019_lachmann_reciever"},
-        Bone = "tag_barrel_attach",
+        Bone = "tag_sling",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
 		Icon_Offset = Vector(-8, 0, -2),
@@ -956,12 +981,12 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         DefaultAttName = "Standard Stock",
-        Category = "cod2019_lachmann_stock",
+        Category = {"cod2019_lachmann_stock","cod2019_tube"},
         Bone = "tag_stock_attach",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(0.45, 0, 0),
         Ang = Angle(0, 0, 0),
 		Scale = 1,
-		InstalledElements = {"stock_none"},
+		InstalledElements = {"stock_attach"},
     },
     {
         PrintName = "Ammo",
@@ -994,27 +1019,22 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/rif_g3a3_decal_a.mdl",
+        StickerModel = "models/weapons/mw22/stickers/rif_lachmann762_decal_a.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/rif_g3a3_decal_b.mdl",
+        StickerModel = "models/weapons/mw22/stickers/rif_lachmann762_decal_b.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/rif_g3a3_decal_c.mdl",
+        StickerModel = "models/weapons/mw22/stickers/rif_lachmann762_decal_c.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/rif_g3a3_decal_d.mdl",
-        Category = "stickers",
-    },
-    {
-        PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/rif_g3a3_decal_e.mdl",
+        StickerModel = "models/weapons/mw22/stickers/rif_lachmann762_decal_d.mdl",
         Category = "stickers",
     },
     {
@@ -1037,5 +1057,5 @@ SWEP.Attachments = {
 
 SWEP.GripPoseParam = 3
 SWEP.GripPoseParam2 = 0.3
-SWEP.CodAngledGripPoseParam = 8
+SWEP.CodAngledGripPoseParam = 25.8
 SWEP.CodStubbyGripPoseParam = 6.1
