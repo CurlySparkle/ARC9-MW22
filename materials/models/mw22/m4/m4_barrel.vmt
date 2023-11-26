@@ -1,30 +1,34 @@
 "VertexLitGeneric"
 {
-    "$basetexture" "models/mw22/m4/m4_barrel_d"
-    "$bumpmap" "models/mw22/m4/m4_barrel_n"
-    "$phongexponenttexture" "models/mw22/m4/m4_barrel_e"
+    "$basetexture" "models\mw22\m4\m4_barrel_rgb"
+    "$bumpmap" "models\mw22\m4\m4_barrel_n"
+    "$phongexponenttexture" "models\mw22\m4\m4_barrel_e"
 
-    "$color2" "[0 0 0]"
-    "$blendtintbybasealpha" "1"
+    /////////////////
+    "$color2" "[0.8 0.8 0.8]"                                     //do not touch this
+    "$blendtintbybasealpha" "1"                             //do not touch this
+    /////////////////
+
     "$phong" "1"
-    "$phongboost" "1.4"
-    "$phongalbedotint" "0"              //enable for brushed metals
-    "$phongfresnelranges" "[1 0.5 0]"
+    "$phongboost" "1"
+    "$phongalbedotint" "1"
+    "$phongalbedoboost" "10"                                //toy around with this
+    "$phongfresnelranges" "[1 0.1 0]"
+       
+    /////////////////
+    "$normalmapalphaenvmapmask" "1"                         //do not touch this
+    /////////////////
 
-    "$basemapalphaenvmapmask" "1"
-    "$envmapfresnel" "1"
-
-    //enable these if viewing outside of MWB
-    //"$envmap" "env_cubemap"
-    //"$envmaptint" "[1 1 1]"
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[0.098 0.098 0.098]"                 
 
     "Proxies"
-    {
+     {
         "Arc9EnvMapTint"
         {
-            "specularity" "0.5"             //0.25, 0.5, 0.75, 1
+            "specularity" "0.5"
             "min" "0"
-            "max" "2"                       //change this if too bright in game
+            "max" "0.1"
         }
-    }
+     }
 }
