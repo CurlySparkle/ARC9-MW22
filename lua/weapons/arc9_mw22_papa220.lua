@@ -185,11 +185,11 @@ SWEP.TracerColor = Color(255, 255, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-1, 0, 2),
+    Pos = Vector(-0.6, 5, 2.8),
     Ang = Angle(0, 0, 10),
-    Magnification = 1,
-    ViewModelFOV = 56,
-	CrosshairInSights = true
+    Magnification = 1.15,
+    ViewModelFOV = 65,
+	CrosshairInSights = false
 }
 
 SWEP.ViewModelFOVBase = 65
@@ -994,64 +994,67 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Mag",
-		Bone = "j_mag1",
-        --Category = {"cod2019_mag"},
+        PrintName = "Slide",
+        DefaultAttName = "Standard slide",
+        Category = "mw22_papa220_slide",
+        Bone = "tag_barrel_attach",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
-	{
-        PrintName = "Silencer",
-		Bone = "tag_silencer",
-        --Category = {"cod2019_mag"},
+    {
+        PrintName = "Muzzle",
+        DefaultAttName = "Standard Muzzle",
+        Category = "cod2019_muzzle_pistols",
+        Bone = "tag_silencer",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
+		Scale = 1,
+    },
+    {
+        PrintName = "Optics",
+        Bone = "tag_reflex",
+        Pos = Vector(1, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod2019_optics_pistols_alt"},
+        CorrectiveAng = Angle(0, 0, 0),
+		--InstalledElements = {"sight_none"},
+		Scale = 1,
     },
 	{
-        PrintName = "Trigger",
+        PrintName = "Triggers",
 		Bone = "j_trigger",
-		Installed = "mw22_papa220_triggers",
-		Integral = "mw22_papa220_triggers",
+		--Installed = "mw22_papa220_triggers",
+		--Integral = "mw22_papa220_triggers",
         Category = {"mw22_papa220_triggers"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
-	{
-        PrintName = "Laser",
-		Bone = "tag_laser_attach",
-        --Category = {"cod2019_mag"},
-        Pos = Vector(0, 0, 0),
+    {
+        PrintName = "Tactical",
+        DefaultAttName = "Default",
+        Category = {"cod2019_tac_pistols","cod2019_grip_pistols"},
+        Bone = "tag_laser_attach",
+        Pos = Vector(1.1, 0, 0),
         Ang = Angle(0, 0, 0),
     },
 	{
         PrintName = "Hammer",
 		Bone = "j_hammer",
-        --Category = {"cod2019_mag"},
+        Category = {"mw22_papa220_hammer"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
 	{
         PrintName = "Grip",
 		Bone = "tag_pistolgrip_attach",
-        --Category = {"cod2019_mag"},
+        Category = {"mw22_papa220_pistgrip"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
-	{
-        PrintName = "Barrel",
-		Bone = "tag_barrel_attach",
-        --Category = {"cod2019_mag"},
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
+    {
+        PrintName = "Perk",
+        Category = {"cod2019_perks","cod2019_perks_soh"}
     },
-	{
-        PrintName = "Optics",
-		Bone = "tag_reflex",
-        --Category = {"cod2019_mag"},
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-    },
-	
 }
 
 SWEP.GripPoseParam = 0.4
