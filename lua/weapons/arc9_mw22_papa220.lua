@@ -993,14 +993,19 @@ end
 -- end
 
 SWEP.AttachmentElements = {
-    ["trigger_none"] = {
+    ["trigger_default"] = {
         Bodygroups = {
             {4,1},
         },
     },
-	["grips_none"] = {
+	["grips_default"] = {
         Bodygroups = {
             {5,1},
+        },
+    },
+	["mags_default"] = {
+        Bodygroups = {
+            {2,1},
         },
     },
 }
@@ -1037,7 +1042,7 @@ SWEP.Attachments = {
         PrintName = "Triggers",
 		Bone = "j_trigger",
         Category = {"mw22_papa220_triggers"},
-		InstalledElements = {"trigger_none"},
+		InstalledElements = {"trigger_default"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
@@ -1050,17 +1055,25 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
 	{
-        PrintName = "Hammer",
-		Bone = "j_hammer",
-        Category = {"mw22_papa220_hammer"},
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
+        --PrintName = "Hammer",
+		--Bone = "j_hammer",
+        --Category = {"mw22_papa220_hammer"},
+        --Pos = Vector(0, 0, 0),
+        --Ang = Angle(0, 0, 0),
     },
 	{
         PrintName = "Grip",
 		Bone = "tag_pistolgrip_attach",
         Category = {"mw22_papa220_pistgrip"},
-		InstalledElements = {"grips_none"},
+		InstalledElements = {"grips_default"},
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
+	{
+        PrintName = "Mags",
+		Bone = "j_mag1",
+        Category = {"mw22_papa220_mags"},
+		InstalledElements = {"mags_default"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },

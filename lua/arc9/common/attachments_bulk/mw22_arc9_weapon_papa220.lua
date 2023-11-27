@@ -86,7 +86,6 @@ ATT.MenuCategory = "ARC9 - MWII Attachments"
 ATT.Category = {"mw22_papa220_pistgrip"}
 ARC9.LoadAttachment(ATT, "mw2022_papa220_tac_grip")
 ---------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------
 ATT = {}
 ATT.PrintName = "Akimbo P890"
 ATT.CompactName = "Akimbo P890"
@@ -100,3 +99,35 @@ ATT.BoneMerge = true
 ATT.MenuCategory = "ARC9 - MWII Attachments"
 ATT.Category = {"mw22_papa220_pistgrip"}
 ARC9.LoadAttachment(ATT, "mw2022_papa220_snp_grip")
+---------------------------------------------------------------------------------------
+--MAGS--
+ATT = {}
+ATT.PrintName = "10 Round Mag"
+ATT.CompactName = "10 Round Mag"
+ATT.Description = [[A magazine that holds 10 rounds of .45 Auto ammunition.]]
+ATT.SortOrder = 1
+--ATT.Icon = Material("entities/attachs/cod2019_holger36_barrel_med.png", "mips smooth")
+ATT.AutoStats = true
+ATT.Free = false
+ATT.Model = "models/pacagma/weapons/papa220/attachments/att_wm_p27_pi_papa220_xmag_v0.mdl"
+ATT.BoneMerge = true
+ATT.MenuCategory = "ARC9 - MWII Attachments"
+ATT.Category = {"mw22_papa220_mags"}
+ATT.ActivateElements = {"mag_none","mag_xmag"}
+ARC9.LoadAttachment(ATT, "mw2022_papa220_mags_10round")
+---------------------------------------------------------------------------------------
+ATT = {}
+ATT.PrintName = "12 Round Mag"
+ATT.CompactName = "12 Round Mag"
+ATT.Description = [[A magazine that holds 12 rounds of .45 Auto ammunition.]]
+ATT.SortOrder = 2
+--ATT.Icon = Material("entities/attachs/cod2019_holger36_barrel_med.png", "mips smooth")
+ATT.AutoStats = true
+ATT.Free = false
+ATT.Model = "models/pacagma/weapons/papa220/attachments/att_wm_p27_pi_papa220_xmaglrg_v0.mdl"
+ATT.BoneMerge = true
+ATT.MenuCategory = "ARC9 - MWII Attachments"
+ATT.Category = {"mw22_papa220_mags"}
+ATT.ActivateElements = {"mag_none","mag_extend"}
+ARC9.LoadAttachment(ATT, "mw2022_papa220_mags_12round")
+---------------------------------------------------------------------------------------
