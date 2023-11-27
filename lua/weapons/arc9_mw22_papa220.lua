@@ -992,6 +992,19 @@ end
     -- model:SetSkin(camo)
 -- end
 
+SWEP.AttachmentElements = {
+    ["trigger_none"] = {
+        Bodygroups = {
+            {4,1},
+        },
+    },
+	["grips_none"] = {
+        Bodygroups = {
+            {5,1},
+        },
+    },
+}
+
 SWEP.Attachments = {
     {
         PrintName = "Slide",
@@ -1023,9 +1036,8 @@ SWEP.Attachments = {
 	{
         PrintName = "Triggers",
 		Bone = "j_trigger",
-		--Installed = "mw22_papa220_triggers",
-		--Integral = "mw22_papa220_triggers",
         Category = {"mw22_papa220_triggers"},
+		InstalledElements = {"trigger_none"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
@@ -1048,6 +1060,7 @@ SWEP.Attachments = {
         PrintName = "Grip",
 		Bone = "tag_pistolgrip_attach",
         Category = {"mw22_papa220_pistgrip"},
+		InstalledElements = {"grips_none"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
