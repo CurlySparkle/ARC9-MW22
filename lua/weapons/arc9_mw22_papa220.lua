@@ -864,14 +864,6 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
-			{s = path .. "p01_ar_mike4_reload_magout.ogg", t = 20/30},
-			{s = path .. "p01_ar_mike4_reload_maghit.ogg", t = 52/30},
-			{s = path .. "p01_ar_mike4_reload_magin.ogg", t = 60/30},
-			{s = path .. "p01_ar_mike4_inspect_rotate.ogg", t = 71/30},
-			{s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 89/30},
-			{s = path .. "p01_ar_mike4_inspect_boltclose.ogg", t = 110/30},
-			{s = path .. "p01_ar_mike4_inspect_hit.ogg", t = 119/30},
-			{s = path .. "p01_ar_mike4_inspect_end.ogg", t = 127/30},
         },
     },
 	["inspect_empty"] = {
@@ -902,14 +894,126 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
-			{s = path .. "p01_ar_mike4_reload_magout.ogg", t = 20/30},
-			{s = path .. "p01_ar_mike4_reload_maghit.ogg", t = 52/30},
-			{s = path .. "p01_ar_mike4_reload_magin.ogg", t = 60/30},
-			{s = path .. "p01_ar_mike4_inspect_rotate.ogg", t = 71/30},
-			{s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 89/30},
-			{s = path .. "p01_ar_mike4_inspect_boltclose.ogg", t = 110/30},
-			{s = path .. "p01_ar_mike4_inspect_hit.ogg", t = 119/30},
-			{s = path .. "p01_ar_mike4_inspect_end.ogg", t = 127/30},
+        },
+    },
+	["inspect_xmag"] = {
+        Source = "lookat01_xmag",
+        MinProgress = 0.1,
+        FireASAP = true,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+        EventTable = {
+            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
+        },
+    },
+	["inspect_empty_xmag"] = {
+        Source = "lookat01_empty_xmag",
+        MinProgress = 0.1,
+        FireASAP = true,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+        EventTable = {
+            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
+        },
+    },
+	["inspect_xmaglrg"] = {
+        Source = "lookat01_xmaglrg",
+        MinProgress = 0.1,
+        FireASAP = true,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+        EventTable = {
+            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
+        },
+    },
+	["inspect_empty_xmaglrg"] = {
+        Source = "lookat01_empty_xmaglrg",
+        MinProgress = 0.1,
+        FireASAP = true,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+        EventTable = {
+            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
         },
     },
     ["bash"] = {
@@ -947,9 +1051,9 @@ SWEP.Hook_TranslateAnimation = function (wep, anim)
     --local attached = self:GetElements()
 
 -----------------------------------------------------------------
-    if anim == "reload" and wep:HasElement("perk_speedreload") and wep:HasElement("mag_extend") then
+    if anim == "reload" and wep:HasElement("perk_speedreload") and wep:HasElement("mag_xmaglrg") then
         return "reload_xmaglrg_fast"
-    elseif anim == "reload_empty" and wep:HasElement("perk_speedreload") and wep:HasElement("mag_extend") then 
+    elseif anim == "reload_empty" and wep:HasElement("perk_speedreload") and wep:HasElement("mag_xmaglrg") then 
         return "reload_xmaglrg_fast_empty"
 -----------------------------------------------------------------
     elseif anim == "reload" and wep:HasElement("perk_speedreload") and wep:HasElement("mag_xmag") then
@@ -957,10 +1061,10 @@ SWEP.Hook_TranslateAnimation = function (wep, anim)
     elseif anim == "reload_empty" and wep:HasElement("perk_speedreload") and wep:HasElement("mag_xmag") then 
         return "reload_xmag_fast_empty"
 -----------------------------------------------------------------
-    elseif anim == "reload" and wep:HasElement("mag_extend") then
+    elseif anim == "reload" and wep:HasElement("mag_xmag") then
         return "reload_xmag"
-    elseif anim == "reload_empty" and wep:HasElement("mag_extend") then 
-        return "reload_xmag_empty"
+    elseif anim == "reload_empty" and wep:HasElement("mag_xmag") then 
+        return "reload_xmag_empty"	
 -----------------------------------------------------------------
     elseif anim == "reload" and wep:HasElement("mag_xmag") then
         return "reload_xmag"

@@ -128,6 +128,6 @@ ATT.Model = "models/pacagma/weapons/papa220/attachments/att_wm_p27_pi_papa220_xm
 ATT.BoneMerge = true
 ATT.MenuCategory = "ARC9 - MWII Attachments"
 ATT.Category = {"mw22_papa220_mags"}
-ATT.ActivateElements = {"mag_none","mag_extend"}
+ATT.ActivateElements = {"mag_none","mag_xmaglrg"}
 ARC9.LoadAttachment(ATT, "mw2022_papa220_mags_12round")
 ---------------------------------------------------------------------------------------
