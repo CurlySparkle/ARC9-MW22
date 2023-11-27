@@ -228,11 +228,11 @@ SWEP.CustomizeNoRotate = false
 
 -------------------------- HoldTypes
 
-SWEP.HoldType = "rpg"
-SWEP.HoldTypeSprint = "rpg"
-SWEP.HoldTypeHolstered = "rpg"
-SWEP.HoldTypeSights = "rpg"
-SWEP.HoldTypeCustomize = "slam"
+SWEP.HoldType = "pistol"
+SWEP.HoldTypeSprint = "pistol"
+SWEP.HoldTypeHolstered = "pistol"
+SWEP.HoldTypeSights = "pistol"
+SWEP.HoldTypeCustomize = "pistol"
 SWEP.HoldTypeBlindfire = "pistol"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
