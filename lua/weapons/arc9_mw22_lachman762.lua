@@ -196,7 +196,7 @@ SWEP.IronSights = {
 
 SWEP.ViewModelFOVBase = 65
 
-SWEP.SprintPos = Vector(-2, 0, 0)
+SWEP.SprintPos = Vector(-2, -1, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.SprintMidPoint = {
@@ -277,8 +277,8 @@ local path = "weapons/mw22/lachmann/"
 SWEP.ShootSound = "MW22.Lachmann.Fire"
 SWEP.ShootSoundIndoor = "MW22.Lachmann.Fire"
 
-SWEP.ShootSoundSilenced = "COD2019.G3A3.Fire.S"
-SWEP.ShootSoundSilencedIndoor = "COD2019.G3A3.Fire.S"
+SWEP.ShootSoundSilenced = "MW22.Lachmann.Fire.S"
+SWEP.ShootSoundSilencedIndoor = "MW22.Lachmann.Fire.S"
 
 -- Non-Silenced
 SWEP.LayerSound = "Layer_AR.Outside"
@@ -295,8 +295,8 @@ SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup.Inside"
 ---------------------------------------------------
 
-SWEP.EnterSightsSound = path .. "weap_ar_falima_ads_up.ogg"
-SWEP.ExitSightsSound = path .. "weap_ar_falima_ads_down.ogg"
+SWEP.EnterSightsSound = path .. "weap_ar_kilo433_ads_up.ogg"
+SWEP.ExitSightsSound = path .. "weap_ar_kilo433_ads_down.ogg"
 
 SWEP.BulletBones = {
     [1] = "j_ammo_01",
@@ -376,13 +376,14 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_xmag_start.ogg", t = 0/30},
-            {s = path .. "wfoly_plr_ar_falima_reload_xmag_rattle.ogg", t = 5/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_magout_01.ogg", t = 17/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_magin_v2_01.ogg", t = 37/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_magin_v2_02.ogg", t = 45/30},
-			{s = path .. "wfoly_plr_ar_falima_raise_start.ogg", t = 61/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_xmag_end.ogg", t = 63/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_bolt_back.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_grab_mag.ogg", t = 21/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_mag_out.ogg", t = 27/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_mag_in.ogg", t = 50/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_turn.ogg", t = 52/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_turn.ogg", t = 72/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_bolt_release.ogg", t = 78/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_end.ogg", t = 85/30},
         },
     },
     ["reload_empty"] = {
@@ -658,9 +659,9 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = path .. "vm_p02_ar_kilo53_raise.ogg", t = 0/30},
-            {s = path .. "vm_p02_ar_kilo53_reload_bolt_back.ogg", t = 15/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_bolt_release.ogg", t = 33/30},
-			{s = path .. "vm_p02_ar_kilo53_reload_end.ogg", t = 65/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_bolt_back.ogg", t = 21/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_bolt_release.ogg", t = 23/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_end.ogg", t = 31/30},
         },
     },
     ["draw"] = {
@@ -734,17 +735,19 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.9,
+                t = 1.1,
                 lhik = 1,
                 rhik = 1
             },
         },
         EventTable = {
-            {s = path .. "wfoly_ar_falima_inspect_01.ogg", t = 0/30},
-			{s = path .. "wfoly_ar_falima_inspect_02.ogg", t = 38/30},
-			{s = path .. "wfoly_ar_falima_inspect_03.ogg", t = 67/30},
-			{s = path .. "wfoly_ar_falima_inspect_04.ogg", t = 101/30},
-			{s = path .. "wfoly_ar_falima_inspect_05.ogg", t = 119/30},
+            {s = path .. "vm_p02_ar_kilo53_inspect_mag_out.ogg", t = 5/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_mvmnt.ogg", t = 41/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_mag_in.ogg", t = 60/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_bolt_back.ogg", t = 82/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_chest.ogg", t = 108/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_bolt_release.ogg", t = 111/30},
+			{s = path .. "vm_p02_ar_kilo53_inspect_end.ogg", t = 122/30},
         },
     },
     ["bash"] = {

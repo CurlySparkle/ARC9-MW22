@@ -14,29 +14,21 @@
     "$phongalbedotint" "1"
     "$phongalbedoboost" "10"                                //toy around with this
     "$phongfresnelranges" "[1 0.1 0]"
-
-    //rimlight doesn't properly show in hlmv, make sure you're changing these values in game
-    "$rimlight" "1"
-    "$rimlightexponent" "100"
-    "$rimmask" "1"
-    "$rimlightboost" "1"
        
     /////////////////
     "$normalmapalphaenvmapmask" "1"                         //do not touch this
     /////////////////
 
-    "$envmap" "envmaps\specularity_00"
-    "$envmaptint" "[0.102 0.102 0.102]"                 
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[0.098 0.098 0.098]"                 
 
-    //remove this if not using MWB
     "Proxies"
-    {
-        "MwEnvMapTint"
+     {
+        "Arc9EnvMapTint"
         {
+            "specularity" "0.5"
             "min" "0"
-            "max" "1"
-            "envmap" "envmaps\specularity_00"
-            "color" "[0.102 0.102 0.102]"
+            "max" "0.1"
         }
-    }
+     }
 }

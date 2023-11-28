@@ -194,7 +194,7 @@ SWEP.IronSights = {
 
 SWEP.ViewModelFOVBase = 65
 
-SWEP.SprintPos = Vector(-1, -1, 0)
+SWEP.SprintPos = Vector(-1, -1, -1)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.SprintMidPoint = {
@@ -835,7 +835,7 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-		Mult = 2,
+		Mult = 1.5,
     },
     ["inspect"] = {
         Source = "lookat01",
