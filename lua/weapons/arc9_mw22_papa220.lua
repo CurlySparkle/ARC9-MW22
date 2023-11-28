@@ -250,6 +250,7 @@ SWEP.CamQCA = 1
 SWEP.CamQCA_Mult = 1
 
 SWEP.ShellModel = "models/weapons/cod2019/shared/shell_762_hr.mdl"
+SWEP.ShellSounds = ARC9.PistolShellSoundsTable
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 SWEP.ShellScale = 0.06
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
@@ -275,29 +276,29 @@ SWEP.DropMagazineAng = Angle(0, -90, 0)
 
 local path = "weapons/mw22/papa220/"
 
-SWEP.ShootSound = "MW22.M4A1.Fire"
-SWEP.ShootSoundIndoor = "MW22.M4A1.Fire"
+SWEP.ShootSound = "MW22.Papa220.Fire"
+SWEP.ShootSoundIndoor = "MW22.Papa220.Fire"
 
-SWEP.ShootSoundSilenced = "COD2019.M4A1.Fire.S"
-SWEP.ShootSoundSilencedIndoor = "COD2019.M4A1.Fire.S"
+SWEP.ShootSoundSilenced = "MW22.Papa220.Fire.S"
+SWEP.ShootSoundSilencedIndoor = "MW22.Papa220.Fire.S"
 
 -- Non-Silenced
-SWEP.LayerSound = "Layer_AR.Outside"
-SWEP.DistantShootSound = "Distant_AR3.Outside"
+SWEP.LayerSound = "Layer_Pistol.Outside"
+SWEP.DistantShootSound = "Distant_Pistol.Outside"
 -- Inside
-SWEP.LayerSoundIndoor = "Layer_AR.Inside"
-SWEP.DistantShootSoundIndoor = "Distant_AR.Inside"
+SWEP.LayerSoundIndoor = "Layer_Pistol.Inside"
+SWEP.DistantShootSoundIndoor = "Distant_Pistol.Inside"
 ---------------------------------------------------
 -- Silenced
 SWEP.LayerSoundSilenced = "Layer_ARSUP.Outside"
-SWEP.DistantShootSoundSilenced = "Distant_AR_Sup.Outside"
+SWEP.DistantShootSoundSilenced = "Distant_Pistol_Mag_Sup.Outside"
 -- Inside
 SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
-SWEP.DistantShootSoundSilencedIndoor = "Distant_AR_Sup.Inside"
+SWEP.DistantShootSoundSilencedIndoor = "Distant_Pistol_Sup.Inside"
 ---------------------------------------------------
 
-SWEP.EnterSightsSound = path .. "wfoly_ar_mike4_ads_up.ogg"
-SWEP.ExitSightsSound = path .. "wfoly_ar_mike4_ads_down.ogg"
+SWEP.EnterSightsSound = path .. "wfoly_pi_mike1911_ads_up.ogg"
+SWEP.ExitSightsSound = path .. "wfoly_pi_mike1911_ads_down.ogg"
 
 SWEP.BulletBones = {
     [1] = "j_ammo_01",
