@@ -87,9 +87,9 @@ ATT.Category = {"mw22_papa220_pistgrip"}
 ARC9.LoadAttachment(ATT, "mw2022_papa220_tac_grip")
 ---------------------------------------------------------------------------------------
 ATT = {}
-ATT.PrintName = "Akimbo P890"
-ATT.CompactName = "Akimbo P890"
-ATT.Description = [[]]
+ATT.PrintName = "BP-Grain Grip"
+ATT.CompactName = "BP-Grain Grip"
+ATT.Description = [[This wodden grip features a grippy texture for a firm hold. Resulting in better aiming stability and reduced flinch when under fire.]]
 ATT.SortOrder = 4
 --ATT.Icon = Material("entities/attachs/cod2019_holger36_barrel_med.png", "mips smooth")
 ATT.AutoStats = true
@@ -176,6 +176,21 @@ ATT.BoneMerge = true
 ATT.MenuCategory = "ARC9 - MWII Attachments"
 ATT.Category = {"mw22_papa220_slide"}
 ARC9.LoadAttachment(ATT, "mw2022_papa220_barshort")
+---------------------------------------------------------------------------------------
+ATT = {}
+ATT.PrintName = "XTEN Harbinger"
+ATT.CompactName = "XTEN Harbinger"
+ATT.Description = [[A Matuzek barrel t hat was designed for speed. Inreses aiming and movement speed.]]
+ATT.SortOrder = 4
+--ATT.Icon = Material("entities/attachs/cod2019_holger36_barrel_med.png", "mips smooth")
+ATT.AutoStats = true
+ATT.Free = false
+ATT.Model = "models/pacagma/weapons/papa220/attachments/att_vm_p27_pi_papa220_barcomp_v0.mdl"
+ATT.BoneMerge = true
+ATT.MenuCategory = "ARC9 - MWII Attachments"
+ATT.Category = {"mw22_papa220_slide"}
+ATT.ActivateElements = {"mw22_papa220_xten_harbinger"}
+ARC9.LoadAttachment(ATT, "mw2022_papa220_barcomp")
 ---------------------------------------------------------------------------------------
 
 
