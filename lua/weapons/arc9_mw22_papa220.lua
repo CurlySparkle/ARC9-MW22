@@ -65,7 +65,7 @@ SWEP.PhysBulletDrag = 1.15
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "ar2" -- What ammo type this gun uses.
+SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 8 -- Self-explanatory.
@@ -1066,15 +1066,26 @@ SWEP.Hook_TranslateAnimation = function (wep, anim)
     elseif anim == "reload_empty" and wep:HasElement("mag_xmag") then 
         return "reload_xmag_empty"	
 -----------------------------------------------------------------
-    elseif anim == "reload" and wep:HasElement("mag_xmag") then
-        return "reload_xmag"
-    elseif anim == "reload_empty" and wep:HasElement("mag_xmag") then 
-        return "reload_xmag_empty"
+    elseif anim == "reload" and wep:HasElement("mag_xmaglrg") then
+        return "reload_xmaglrg"
+	elseif anim == "reload_empty" and wep:HasElement("mag_xmaglrg") then
+        return "reload_xmaglrg_empty"
 -----------------------------------------------------------------
     elseif anim == "reload" and wep:HasElement("perk_speedreload") then
         return "reload_fast"
     elseif anim == "reload_empty" and wep:HasElement("perk_speedreload") then 
         return "reload_fast_empty"
+-----------------------------------------------------------------
+	elseif anim == "inspect" and wep:HasElement("mag_xmag") then
+        return "inspect_xmag"
+    elseif anim == "inspect_empty" and wep:HasElement("mag_xmag") then 
+        return "inspect_empty_xmag"	
+-----------------------------------------------------------------
+	elseif anim == "inspect" and wep:HasElement("mag_xmaglrg") then
+        return "inspect_xmaglrg"
+    elseif anim == "inspect_empty" and wep:HasElement("mag_xmaglrg") then 
+        return "inspect_empty_xmaglrg"			
+-----------------------------------------------------------------
     end
 end
 
@@ -1097,19 +1108,24 @@ end
 -- end
 
 SWEP.AttachmentElements = {
-    ["trigger_default"] = {
+    ["mags_none"] = {
+        Bodygroups = {
+            {2,1},
+        },
+    },
+    ["trigger_none"] = {
+        Bodygroups = {
+            {3,1},
+        },
+    },
+	["grips_none"] = {
         Bodygroups = {
             {4,1},
         },
     },
-	["grips_default"] = {
+	["barrels_none"] = {
         Bodygroups = {
             {5,1},
-        },
-    },
-	["mags_default"] = {
-        Bodygroups = {
-            {2,1},
         },
     },
 }
@@ -1118,6 +1134,7 @@ SWEP.Attachments = {
     {
         PrintName = "Slide",
         DefaultAttName = "Standard slide",
+		InstalledElements = {"barrels_none"},
         Category = "mw22_papa220_slide",
         Bone = "tag_barrel_attach",
         Pos = Vector(0, 0, 0),
@@ -1144,9 +1161,27 @@ SWEP.Attachments = {
     },
 	{
         PrintName = "Triggers",
+		DefaultAttName = "Standard Trigger",
 		Bone = "j_trigger",
         Category = {"mw22_papa220_triggers"},
-		InstalledElements = {"trigger_default"},
+		InstalledElements = {"trigger_none"},
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
+	{
+        PrintName = "Grip",
+		DefaultAttName = "Standard Grip",
+		Bone = "tag_pistolgrip_attach",
+        Category = {"mw22_papa220_pistgrip"},
+		InstalledElements = {"grips_none"},
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
+	{
+        PrintName = "Mags",
+		Bone = "j_mag1",
+        Category = {"mw22_papa220_mags"},
+		InstalledElements = {"mags_none"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
@@ -1156,29 +1191,6 @@ SWEP.Attachments = {
         Category = {"cod2019_tac_pistols","cod2019_grip_pistols"},
         Bone = "tag_laser_attach",
         Pos = Vector(1.1, 0, 0),
-        Ang = Angle(0, 0, 0),
-    },
-	{
-        --PrintName = "Hammer",
-		--Bone = "j_hammer",
-        --Category = {"mw22_papa220_hammer"},
-        --Pos = Vector(0, 0, 0),
-        --Ang = Angle(0, 0, 0),
-    },
-	{
-        PrintName = "Grip",
-		Bone = "tag_pistolgrip_attach",
-        Category = {"mw22_papa220_pistgrip"},
-		InstalledElements = {"grips_default"},
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-    },
-	{
-        PrintName = "Mags",
-		Bone = "j_mag1",
-        Category = {"mw22_papa220_mags"},
-		InstalledElements = {"mags_default"},
-        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
     {

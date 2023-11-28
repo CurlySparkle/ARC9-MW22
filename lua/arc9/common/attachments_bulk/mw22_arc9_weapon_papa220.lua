@@ -106,6 +106,7 @@ ATT.PrintName = "10 Round Mag"
 ATT.CompactName = "10 Round Mag"
 ATT.Description = [[A magazine that holds 10 rounds of .45 Auto ammunition.]]
 ATT.SortOrder = 1
+ATT.ClipSizeOverride = 10
 --ATT.Icon = Material("entities/attachs/cod2019_holger36_barrel_med.png", "mips smooth")
 ATT.AutoStats = true
 ATT.Free = false
@@ -121,6 +122,7 @@ ATT.PrintName = "12 Round Mag"
 ATT.CompactName = "12 Round Mag"
 ATT.Description = [[A magazine that holds 12 rounds of .45 Auto ammunition.]]
 ATT.SortOrder = 2
+ATT.ClipSizeOverride = 12
 --ATT.Icon = Material("entities/attachs/cod2019_holger36_barrel_med.png", "mips smooth")
 ATT.AutoStats = true
 ATT.Free = false
@@ -131,3 +133,49 @@ ATT.Category = {"mw22_papa220_mags"}
 ATT.ActivateElements = {"mag_none","mag_xmaglrg"}
 ARC9.LoadAttachment(ATT, "mw2022_papa220_mags_12round")
 ---------------------------------------------------------------------------------------
+--BARRELS--
+---------------------------------------------------------------------------------------
+ATT = {}
+ATT.PrintName = "Matuzek Cottonmouth"
+ATT.CompactName = "Matuzek Cottonmouth"
+ATT.Description = [[A long 140mm barrel improves bullet velocity and damage range while mitigating recoil. Extra weight decreases handling.]]
+ATT.SortOrder = 1
+--ATT.Icon = Material("entities/attachs/cod2019_holger36_barrel_med.png", "mips smooth")
+ATT.AutoStats = true
+ATT.Free = false
+ATT.Model = "models/pacagma/weapons/papa220/attachments/att_vm_p27_pi_papa220_barlong_v0.mdl"
+ATT.BoneMerge = true
+ATT.MenuCategory = "ARC9 - MWII Attachments"
+ATT.Category = {"mw22_papa220_slide"}
+ARC9.LoadAttachment(ATT, "mw2022_papa220_barlong")
+---------------------------------------------------------------------------------------
+ATT = {}
+ATT.PrintName = "XRK Tacops Barrel"
+ATT.CompactName = "XRK Tacops Barrel"
+ATT.Description = [[A short tactical barrel with a threaded muzzle for muzzle devices. Increases movement and aiming speed.]]
+ATT.SortOrder = 2
+--ATT.Icon = Material("entities/attachs/cod2019_holger36_barrel_med.png", "mips smooth")
+ATT.AutoStats = true
+ATT.Free = false
+ATT.Model = "models/pacagma/weapons/papa220/attachments/att_vm_p27_pi_papa220_barlight_v0.mdl"
+ATT.BoneMerge = true
+ATT.MenuCategory = "ARC9 - MWII Attachments"
+ATT.Category = {"mw22_papa220_slide"}
+ARC9.LoadAttachment(ATT, "mw2022_papa220_barlight")
+---------------------------------------------------------------------------------------
+ATT = {}
+ATT.PrintName = "Matuzek Venom Barrel"
+ATT.CompactName = "Matuzek Venom Barrel"
+ATT.Description = [[A Matuzek barrel t hat was designed for speed. Inreses aiming and movement speed.]]
+ATT.SortOrder = 3
+--ATT.Icon = Material("entities/attachs/cod2019_holger36_barrel_med.png", "mips smooth")
+ATT.AutoStats = true
+ATT.Free = false
+ATT.Model = "models/pacagma/weapons/papa220/attachments/att_vm_p27_pi_papa220_barshort_v0.mdl"
+ATT.BoneMerge = true
+ATT.MenuCategory = "ARC9 - MWII Attachments"
+ATT.Category = {"mw22_papa220_slide"}
+ARC9.LoadAttachment(ATT, "mw2022_papa220_barshort")
+---------------------------------------------------------------------------------------
+
+

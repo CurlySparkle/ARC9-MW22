@@ -1,0 +1,42 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "pacagma\weapons\papa220\xmaterial_5529079f01117ced_barlong_v0_rgb"
+    "$bumpmap" "pacagma\weapons\papa220\xmaterial_5529079f01117ced_barlong_v0_n"
+    "$phongexponenttexture" "pacagma\weapons\papa220\xmaterial_5529079f01117ced_barlong_v0_e"
+
+    /////////////////
+    "$color2" "[0 0 0]"                                     //do not touch this
+    "$blendtintbybasealpha" "1"                             //do not touch this
+    /////////////////
+
+    "$phong" "1"
+    "$phongboost" "1"
+    "$phongalbedotint" "1"
+    "$phongalbedoboost" "10"                                //toy around with this
+    "$phongfresnelranges" "[1 0.1 0]"
+
+    //rimlight doesn't properly show in hlmv, make sure you're changing these values in game
+    "$rimlight" "1"
+    "$rimlightexponent" "100"
+    "$rimmask" "1"
+    "$rimlightboost" "1"
+       
+    /////////////////
+    "$normalmapalphaenvmapmask" "1"                         //do not touch this
+    /////////////////
+
+    "$envmap" "envmaps\specularity_00"
+    "$envmaptint" "[0.38 0.361 0.349]"                 
+
+    //remove this if not using MWB
+    "Proxies"
+    {
+        "MwEnvMapTint"
+        {
+            "min" "0"
+            "max" "1"
+            "envmap" "envmaps\specularity_00"
+            "color" "[0.38 0.361 0.349]"
+        }
+    }
+}
