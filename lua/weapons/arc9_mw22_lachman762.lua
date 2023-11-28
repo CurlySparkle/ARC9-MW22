@@ -187,8 +187,8 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.45, -2, 1),
-    Ang = Angle(0, 0, 1),
+    Pos = Vector(-2.79, -2, 0.9),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.15,
 	ViewModelFOV = 54,
 	CrosshairInSights = false
@@ -272,10 +272,10 @@ SWEP.DropMagazineQCA = 3
 
 -------------------------- SOUNDS
 
-local path = "weapons/cod2019/g3a3/"
+local path = "weapons/mw22/lachmann/"
 
-SWEP.ShootSound = "COD2019.G3A3.Fire"
-SWEP.ShootSoundIndoor = "COD2019.G3A3.Fire"
+SWEP.ShootSound = "MW22.Lachmann.Fire"
+SWEP.ShootSoundIndoor = "MW22.Lachmann.Fire"
 
 SWEP.ShootSoundSilenced = "COD2019.G3A3.Fire.S"
 SWEP.ShootSoundSilencedIndoor = "COD2019.G3A3.Fire.S"
@@ -341,8 +341,8 @@ SWEP.TriggerDelay = 0.01 -- Set to > 0 to play the "trigger" animation before sh
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
 SWEP.TriggerDelayTime = 0.01 -- Time until weapon fires.
 
-SWEP.TriggerDownSound = "weapons/cod2019/m13/weap_mcharlie_fire_first_plr_01.ogg"
-SWEP.TriggerUpSound = "weapons/cod2019/m4a1/weap_mike4_fire_plr_disconnector_01.ogg"
+SWEP.TriggerDownSound = "weapons/mw22/lachmann/weap_kilo53_fcg_deadtrig_plr_01.ogg"
+SWEP.TriggerUpSound = "weapons/mw22/lachmann/weap_kilo53_fcg_disconnector_plr_01.ogg"
 
 SWEP.Animations = {
     ["fire"] = {
@@ -425,6 +425,8 @@ SWEP.Animations = {
         Source = "reload_fast",
 		DropMagAt = 1.2,
 		MagSwapTime = 0.85,
+		MinProgress = 0.8,
+		FireASAP = true,
         IKTimeLine = {
             {
                 t = 0,
@@ -448,12 +450,11 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_start.ogg", t = 0/30},
-            {s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_rattle.ogg", t = 5/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_magout_01.ogg", t = 9/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_magin_v2_01.ogg", t = 30/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_magin_v2_02.ogg", t = 38/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_fast_xmag_end.ogg", t = 48/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_fast_roll.ogg", t = 0/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_mag_out.ogg", t = 9/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_mag_hit.ogg", t = 30/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_fast_mag_in.ogg", t = 38/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_end.ogg", t = 48/30},
         },
     },
     ["reload_fast_empty"] = {
@@ -656,11 +657,10 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_raise_start.ogg", t = 0/30},
-            {s = path .. "wfoly_plr_ar_falima_raise_settle.ogg", t = 3/30},
-            {s = path .. "mp5-submachinegun-foley-bolt-charge-1.ogg", t = 15/30},
-			{s = path .. "mp5-submachinegun-foley-bolt-lock-back-1.ogg", t = 33/30},
-			{s = path .. "wfoly_plr_ar_falima_reload_empty_xmag_end.ogg", t = 65/30},
+            {s = path .. "vm_p02_ar_kilo53_raise.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_reload_bolt_back.ogg", t = 15/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_bolt_release.ogg", t = 33/30},
+			{s = path .. "vm_p02_ar_kilo53_reload_end.ogg", t = 65/30},
         },
     },
     ["draw"] = {
@@ -678,8 +678,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_raise_start.ogg", t = 0/30},
-			{s = path .. "wfoly_plr_ar_falima_raise_settle.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_raise.ogg", t = 0/30},
         },
     },
     ["holster"] = {
@@ -697,7 +696,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_plr_ar_falima_drop_down.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_drop.ogg", t = 0/30},
         },
     },
     ["idle"] = {
@@ -788,7 +787,7 @@ SWEP.Animations = {
     ["switchsights"] = {
         Source = "semi_on",
         EventTable = {
-            {s = path .. "wfoly_ar_falima_inspect_02.ogg", t = 0/30},
+            {s = path .. "vm_p02_ar_kilo53_inspect_rotate.ogg", t = 0/30},
         },
     },
 }
