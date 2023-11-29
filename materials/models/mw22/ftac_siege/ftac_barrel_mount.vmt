@@ -1,11 +1,11 @@
 "VertexLitGeneric"
 {
-    "$basetexture" "pacagma\weapons\papa220\xmaterial_2a824c13ac1d5862_bullets_rgb"
-    "$bumpmap" "pacagma\weapons\papa220\xmaterial_2a824c13ac1d5862_bullets_n"
-    "$phongexponenttexture" "pacagma\weapons\papa220\xmaterial_2a824c13ac1d5862_bullets_e"
+    "$basetexture" "models\mw22\ftac_siege\ftac_barrel_mount_rgb"
+    "$bumpmap" "models\mw22\ftac_siege\ftac_barrel_mount_n"
+    "$phongexponenttexture" "models\mw22\ftac_siege\ftac_barrel_mount_e"
 
     /////////////////
-    "$color2" "[0.3 0.3 0.3]"                                     //do not touch this
+    "$color2" "[0 0 0]"                                     //do not touch this
     "$blendtintbybasealpha" "1"                             //do not touch this
     /////////////////
 
@@ -14,7 +14,7 @@
     "$phongalbedotint" "1"
     "$phongalbedoboost" "10"                                //toy around with this
     "$phongfresnelranges" "[1 0.1 0]"
-       
+
     /////////////////
     "$normalmapalphaenvmapmask" "1"                         //do not touch this
     /////////////////
@@ -28,7 +28,7 @@
         {
             "specularity" "0.5"
             "min" "0"
-            "max" "0.03"
+            "max" "0.2"
         }
      }
 }
