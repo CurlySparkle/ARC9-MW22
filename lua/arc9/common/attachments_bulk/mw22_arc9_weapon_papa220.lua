@@ -13,6 +13,7 @@ ATT.Model = "models/pacagma/weapons/papa220/attachments/att_vm_p27_pi_papa220_tr
 ATT.BoneMerge = true
 ATT.MenuCategory = "ARC9 - MWII Attachments"
 ATT.Category = {"mw22_papa220_triggers"}
+ATT.RPMMult = 1.5
 ARC9.LoadAttachment(ATT, "mw2022_papa220_light_trigger")
 ---------------------------------------------------------------------------------------
 ATT = {}
@@ -41,6 +42,7 @@ ATT.Model = "models/pacagma/weapons/papa220/attachments/att_vm_p27_pi_papa220_tr
 ATT.BoneMerge = true
 ATT.MenuCategory = "ARC9 - MWII Attachments"
 ATT.Category = {"mw22_papa220_triggers"}
+ATT.RPMMult = 2
 ARC9.LoadAttachment(ATT, "mw2022_papa220_hair_trigger")
 ---------------------------------------------------------------------------------------
 --GRIPS--

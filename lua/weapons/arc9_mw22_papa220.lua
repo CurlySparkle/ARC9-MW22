@@ -29,7 +29,7 @@ SWEP.Description = [[For close-quarters situations, the P890 semi-auto pistol ta
 SWEP.ViewModel = "models/pacagma/weapons/viewmodel_papa220.mdl"
 --SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
 
-SWEP.Slot = 2
+SWEP.Slot = 1
 
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
@@ -282,7 +282,7 @@ SWEP.ShootSoundSilencedIndoor = "MW22.P890.Fire.S"
 
 -- Non-Silenced Outside
 SWEP.LayerSound = "Layer_Pistol.Outside"
-SWEP.DistantShootSound = "Distant_Pistol2.Outside"
+SWEP.DistantShootSound = "Distant_Pistol_Alt.Outside"
 -- Non-Silenced Inside
 SWEP.LayerSoundIndoor = "Layer_Pistol.Inside"
 SWEP.DistantShootSoundIndoor = "Distant_Pistol2.Inside"
@@ -571,10 +571,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_fast_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_fast_magout.ogg", t = 11/30},
-			{s = path .. "p01_ar_mike4_reload_fast_magin.ogg", t = 28/30},
-			{s = path .. "p01_ar_mike4_reload_fast_end.ogg", t = 20/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_raise.ogg", t = 0/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_magout.ogg", t = 6/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_mvmnt.ogg", t = 12/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_magin.ogg", t = 18/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_maghit.ogg", t = 21/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_end.ogg", t = 27/30},
         },
     },
     ["reload_xmag_fast_empty"] = {
@@ -710,11 +712,13 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_fast_xmaglrg_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_fast_xmaglrg_magout.ogg", t = 10/30},
-			{s = path .. "p01_ar_mike4_reload_fast_xmaglrg_maghit.ogg", t = 37/30},
-			{s = path .. "p01_ar_mike4_reload_fast_xmaglrg_magin.ogg", t = 42/30},
-			{s = path .. "p01_ar_mike4_reload_fast_xmaglrg_end.ogg", t = 53/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_raise.ogg", t = 0/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_magout.ogg", t = 6/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_mvmnt.ogg", t = 12/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_magin.ogg", t = 19/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_maghit.ogg", t = 22/30},
+			{s = path .. "wfoly_pi_papa220_reload_empty_magin.ogg", t = 28/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_end.ogg", t = 30/30},
         },
     },
     ["reload_xmaglrg_fast_empty"] = {
