@@ -11,7 +11,6 @@ sound.Add( {
 		"^weapons/mw22/expendite12/weap_mike1014_fire_plr_shot_05.ogg",
 		"^weapons/mw22/expendite12/weap_mike1014_fire_plr_shot_06.ogg",
 		"^weapons/mw22/expendite12/weap_mike1014_fire_plr_shot_07.ogg",
-		"^weapons/mw22/expendite12/weap_mike1014_fire_plr_shot_08.ogg",
     }              
 } )
 

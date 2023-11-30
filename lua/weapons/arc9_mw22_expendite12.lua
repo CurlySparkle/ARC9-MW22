@@ -38,7 +38,7 @@ SWEP.WorldModelMirror = "models/weapons/mw22/c_shot_expendite12.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-11, 6, -2.5),
     Ang = Angle(-17, 3, 180),
-    TPIKPos = Vector(-5, 3, 0),
+    TPIKPos = Vector(-7, 3, 0),
     TPIKAng = Angle(-10, 3, 180),
     Scale = 1
 }
@@ -137,6 +137,7 @@ SWEP.VisualRecoilUp = 0.5
 SWEP.VisualRecoilSide = -0.1
 
 SWEP.VisualRecoilMultSights = 0.3
+SWEP.VisualRecoilUpSights = 1
 SWEP.VisualRecoilPunchSights = 55
 
 SWEP.VisualRecoilSpringPunchDamping = 11
@@ -207,7 +208,7 @@ SWEP.IronSights = {
 
 SWEP.ViewModelFOVBase = 65
 
-SWEP.SprintPos = Vector(0, 0, 0)
+SWEP.SprintPos = Vector(-1, 1, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
 SWEP.SprintMidPoint = {
@@ -223,11 +224,11 @@ SWEP.MovingMidPoint = {
     Ang = Angle(0, 0, 0)
 }
 
-SWEP.MovingPos = Vector(-0.8, -0.1, -0.9)
-SWEP.MovingAng = Angle(-0.4, 0.1, -8)
+SWEP.MovingPos = Vector(-0.8, -0.8, -1)
+SWEP.MovingAng = Angle(-0.4, 0.1, -9)
 
 SWEP.CrouchPos = Vector(-0.5, -0, -1)
-SWEP.CrouchAng = Angle(0.6, 0.3, -5)
+SWEP.CrouchAng = Angle(0.6, 0.3, -9)
 
 SWEP.PeekPos = Vector(-1, 1.5, -3.2)
 SWEP.PeekAng = Angle(0, 0.4, -45)
@@ -302,14 +303,14 @@ SWEP.ShootSoundSilencedIndoor = "MW22.Expendite.Fire.S"
 
 -- Non-Silenced Outside
 SWEP.LayerSound = "Layer_Shotgun.Outside"
-SWEP.DistantShootSound = "Distant_Shotgun.Outside"
+SWEP.DistantShootSound = "Distant_Shotgun_2.Outside"
 -- Inside
 SWEP.LayerSoundIndoor = "Layer_Shotgun.Inside"
 SWEP.DistantShootSoundIndoor = "Distant_LMG.Inside"
 ---------------------------------------------------
 -- Silenced Outside
 SWEP.LayerSoundSilenced = "Layer_ARSUP.Outside"
-SWEP.DistantShootSoundSilenced = "Distant_Shotgun2.Outside"
+SWEP.DistantShootSoundSilenced = "Distant_Shotgun_Sub.Outside"
 -- Inside
 SWEP.LayerSoundSilencedIndoor = "Layer_ShotgunSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "Distant_ShotgunSUP.Inside"
@@ -516,12 +517,12 @@ SWEP.Animations = {
             },
             {
                 t = 0.7,
-                lhik = 1,
+                lhik = 0,
                 rhik = 1
             },
             {
                 t = 1,
-                lhik = 1,
+                lhik = 0,
                 rhik = 1
             },
         },
@@ -539,10 +540,15 @@ SWEP.Animations = {
             {
                 t = 0,
                 lhik = 0,
-                rhik = 1
+                rhik = 0
             },
             {
                 t = 0.5,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
                 lhik = 1,
                 rhik = 1
             },
@@ -555,7 +561,7 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw_short",
-		MinProgress = 0.8,
+		MinProgress = 0.2,
 		FireASAP = true,
         IKTimeLine = {
             {
@@ -649,6 +655,39 @@ SWEP.Animations = {
 			{s = path .. "p12_sh_mike1014_reload_fast_empty_chamber_start_loadshell.ogg", t = 184/30},
 			{s = path .. "p12_sh_mike1014_reload_fast_empty_chamber_start_boltrelease.ogg", t = 188/30},
 			{s = path .. "p12_sh_mike1014_inspect_end.ogg", t = 198/30},
+        },
+    },
+    ["inspect_empty"] = {
+        Source = "lookat01_empty",
+        MinProgress = 0.1,
+        FireASAP = true,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+        EventTable = {
+            {s = path .. "p12_sh_mike1014_inspect_raise.ogg", t = 5/30},
+			{s = path .. "p12_sh_mike1014_inspect_adjust.ogg", t = 27/30},
+			{s = path .. "p12_sh_mike1014_inspect_turn.ogg", t = 79/30},
+			{s = path .. "p12_sh_mike1014_inspect_end.ogg", t = 100/30},
         },
     },
     ["bash"] = {
@@ -853,7 +892,7 @@ SWEP.Attachments = {
         DefaultAttName = "Default",
         Category = {"cod2019_grip","cod2019_expendite12_grips"},
         Bone = "tag_grip_attach",
-        Pos = Vector(2, 0, 0),
+        Pos = Vector(4.5, 0, 0),
         Ang = Angle(0, 0, 180),
 		Scale = 1,
 		InstalledElements = {""},
@@ -948,6 +987,6 @@ SWEP.Attachments = {
 
 SWEP.GripPoseParam = 4.3
 SWEP.GripPoseParam2 = 0.7
-SWEP.CodAngledGripPoseParam = 4
-SWEP.CodStubbyGripPoseParam = 0
+SWEP.CodAngledGripPoseParam = 26
+SWEP.CodStubbyGripPoseParam = 8
 SWEP.CodStubbyTallGripPoseParam = 18
