@@ -27,7 +27,7 @@ SWEP.Credits = {
 SWEP.Description = [[For close-quarters situations, the P890 semi-auto pistol takes advantage of accuracy, reliability, and a hard-hitting .45 Auto round. Subsonic Ammo hides kill skulls from the enemy team.]]
 
 SWEP.ViewModel = "models/pacagma/weapons/viewmodel_papa220.mdl"
---SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
+SWEP.WorldModel = "models/weapons/w_pist_p228.mdl"
 
 SWEP.Slot = 1
 
@@ -329,6 +329,9 @@ SWEP.Animations = {
                 lhik = 1,
                 rhik = 1
             },
+        },
+        EventTable = {
+			{s = path .. "weap_papa220_fire_plr_lfe_01.ogg", v = 0.7, l = 70, c = CHAN_ITEM, t = 0},
         },
     },
     ["reload"] = {
@@ -759,7 +762,7 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "draw",
-		MinProgress = 0.8,
+		MinProgress = 0.6,
 		FireASAP = true,
         IKTimeLine = {
             {
@@ -793,7 +796,7 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw_short",
-		MinProgress = 0.3,
+		MinProgress = 0.2,
 		FireASAP = true,
         IKTimeLine = {
             {

@@ -27,7 +27,7 @@ SWEP.Credits = {
 SWEP.Description = [[A practiced hand can control the Expedite 12's recoil to devastating effects. This semi-auto shotgun features a regulated gas system, ergonomic stock, and standard rail.]]
 
 SWEP.ViewModel = "models/weapons/mw22/c_shot_expendite12.mdl"
-SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
+SWEP.WorldModel = "models/weapons/w_shot_xm1014.mdl"
 SWEP.DefaultBodygroups = "000000000000"
 
 SWEP.Slot = 3
@@ -581,7 +581,6 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-		Mult = 0.8,
         IKTimeLine = {
             {
                 t = 0,
@@ -613,11 +612,11 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-		Mult = 2,
+		Mult = 1.5,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-		Mult = 2,
+		Mult = 1.5,
     },
     ["inspect"] = {
         Source = "lookat01",
