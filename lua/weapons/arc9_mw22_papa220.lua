@@ -45,7 +45,7 @@ SWEP.WorldModelOffset = {
 -------------------------- DAMAGE PROFILE
 
 SWEP.DamageMax = 62 -- Damage done at point blank range
-SWEP.DamageMin = 48 -- Damage done at maximum range
+SWEP.DamageMin = 32 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
@@ -67,7 +67,7 @@ SWEP.PhysBulletDrag = 1.15
 
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
-SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
+SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 8 -- Self-explanatory.
 SWEP.SupplyLimit = 16 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 SWEP.SecondarySupplyLimit = 10 -- Amount of reserve UBGL magazines you can take.
@@ -153,15 +153,14 @@ end
 SWEP.Spread = 0.002
 
 SWEP.SpreadAddRecoil = 0.01
-SWEP.SpreadMultRecoil = 1.2
+SWEP.SpreadMultRecoil = 1.1
 SWEP.RecoilModifierCap = 2
-SWEP.RecoilModifierCapMove = 0.5
 SWEP.RecoilModifierCapSights = 0
 
-SWEP.SpreadMultMove = 2
+SWEP.SpreadAddMove = 0.05
 --SWEP.SpreadAddMidAir = 0
-SWEP.SpreadAddHipFire = 0.04
-SWEP.SpreadAddCrouch = -0.03
+SWEP.SpreadAddHipFire = 0.015
+SWEP.SpreadAddCrouch = -0.01
 SWEP.SpreadAddSights = -0.5
 
 
@@ -216,7 +215,7 @@ SWEP.MovingAng = Angle(0, 0, -9)
 SWEP.CrouchPos = Vector(-0.5, -0, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.PeekPos = Vector(-1, 1, -3.5)
+SWEP.PeekPos = Vector(-2.5, -8, -3.5)
 SWEP.PeekAng = Angle(0, 0, -45)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -241,58 +240,57 @@ SWEP.AnimDraw = false
 
 -------------------------- EFFECTS
 
-SWEP.MuzzleParticle = "AC_muzzle_rifle_fp"
+SWEP.MuzzleParticle = "AC_muzzle_pistol_fp"
 SWEP.AfterShotParticle = "AC_muzzle_smoke_barrel"
-SWEP.MuzzleEffectQCA = 2
+SWEP.MuzzleEffectQCA = 1
 SWEP.ProceduralViewQCA = 1
 
-SWEP.CamQCA = 1
+SWEP.CamQCA = 4
 SWEP.CamQCA_Mult = 1
 
-SWEP.ShellModel = "models/weapons/cod2019/shared/shell_762_hr.mdl"
+SWEP.ShellModel = "models/weapons/cod2019/shared/shell_9mm_hr.mdl"
 SWEP.ShellSounds = ARC9.PistolShellSoundsTable
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 SWEP.ShellScale = 0.06
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
-SWEP.CaseEffectQCA = 3
 
 SWEP.ShouldDropMag = false
 SWEP.ShouldDropMagEmpty = false
-SWEP.DropMagazineModel = "models/weapons/cod2019/mags/w_rif_m4_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
+SWEP.DropMagazineModel = "models/weapons/cod2019/mags/w_pist_m1911_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
 SWEP.DropMagazineSounds = {
-"weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_ar_poly_concrete_01.ogg", 
-"weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_ar_poly_concrete_02.ogg", 
-"weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_ar_poly_concrete_03.ogg", 
-"weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_ar_poly_concrete_04.ogg", 
-"weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_ar_poly_concrete_05.ogg",
-"weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_ar_poly_concrete_06.ogg", 
+"weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_smg_metal_concrete_01.ogg",
+"weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_smg_metal_concrete_02.ogg",
+"weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_smg_metal_concrete_03.ogg",
+"weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_smg_metal_concrete_04.ogg",
+"weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_smg_metal_concrete_05.ogg",
+"weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_smg_metal_concrete_06.ogg",
 }
 SWEP.DropMagazineAmount = 1 -- Amount of mags to drop.
 SWEP.DropMagazineTime = 0.4
-SWEP.DropMagazineQCA = 6
+SWEP.DropMagazineQCA = 3
 SWEP.DropMagazineAng = Angle(0, -90, 0)
 
 -------------------------- SOUNDS
 
-local path = "weapons/mw22/papa220/"
+local path = "weapons/mw22/p890/"
 
-SWEP.ShootSound = "MW22.Papa220.Fire"
-SWEP.ShootSoundIndoor = "MW22.Papa220.Fire"
+SWEP.ShootSound = "MW22.P890.Fire"
+SWEP.ShootSoundIndoor = "MW22.P890.Fire"
 
-SWEP.ShootSoundSilenced = "MW22.Papa220.Fire.S"
-SWEP.ShootSoundSilencedIndoor = "MW22.Papa220.Fire.S"
+SWEP.ShootSoundSilenced = "MW22.P890.Fire.S"
+SWEP.ShootSoundSilencedIndoor = "MW22.P890.Fire.S"
 
--- Non-Silenced
+-- Non-Silenced Outside
 SWEP.LayerSound = "Layer_Pistol.Outside"
-SWEP.DistantShootSound = "Distant_Pistol.Outside"
--- Inside
+SWEP.DistantShootSound = "Distant_Pistol2.Outside"
+-- Non-Silenced Inside
 SWEP.LayerSoundIndoor = "Layer_Pistol.Inside"
-SWEP.DistantShootSoundIndoor = "Distant_Pistol.Inside"
+SWEP.DistantShootSoundIndoor = "Distant_Pistol2.Inside"
 ---------------------------------------------------
--- Silenced
+-- Silenced Outside
 SWEP.LayerSoundSilenced = "Layer_ARSUP.Outside"
-SWEP.DistantShootSoundSilenced = "Distant_Pistol_Mag_Sup.Outside"
--- Inside
+SWEP.DistantShootSoundSilenced = "Distant_Pistol_Sup2.Outside"
+-- Silenced Inside
 SWEP.LayerSoundSilencedIndoor = "Layer_ARSUP.Inside"
 SWEP.DistantShootSoundSilencedIndoor = "Distant_Pistol_Sup.Inside"
 ---------------------------------------------------
@@ -319,8 +317,8 @@ SWEP.TriggerDelay = 0.025 -- Set to > 0 to play the "trigger" animation before s
 SWEP.TriggerDelay = true -- Add a delay before the weapon fires.
 SWEP.TriggerDelayTime = 0.025 -- Time until weapon fires.
 
-SWEP.TriggerDownSound = "weapons/cod2019/m13/weap_mcharlie_fire_first_plr_01.ogg"
-SWEP.TriggerUpSound = "weapons/cod2019/m4a1/weap_mike4_fire_plr_disconnector_01.ogg"
+SWEP.TriggerDownSound =  path .. "wfoly_pi_fire_plr_fcg_01.ogg"
+SWEP.TriggerUpSound =  path .. "wfoly_pi_fire_plr_fcg_disconnector_01.ogg"
 
 SWEP.Animations = {
     ["fire"] = {
@@ -360,11 +358,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_magout.ogg", t = 21/30},
-			{s = path .. "p01_ar_mike4_reload_maghit.ogg", t = 34/30},
-			{s = path .. "p01_ar_mike4_reload_magin.ogg", t = 40/30},
-			{s = path .. "p01_ar_mike4_reload_end.ogg", t = 53/30},
+			{s = path .. "wfoly_pi_papa220_reload_raise.ogg", t = 0/30},
+			{s = path .. "wfoly_pi_papa220_reload_magrelease.ogg", t = 9/30},
+			{s = path .. "wfoly_pi_papa220_reload_magout.ogg", t = 17/30},
+			{s = path .. "wfoly_pi_papa220_reload_magin.ogg", t = 34/30},
+			{s = path .. "wfoly_pi_papa220_reload_maghit.ogg", t = 36/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_end.ogg", t = 45/30},
         },
     },
     ["reload_empty"] = {
@@ -431,10 +430,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "p01_ar_mike4_reload_fast_lift.ogg", t = 0/30},
-			{s = path .. "p01_ar_mike4_reload_fast_magout.ogg", t = 11/30},
-			{s = path .. "p01_ar_mike4_reload_fast_magin.ogg", t = 28/30},
-			{s = path .. "p01_ar_mike4_reload_fast_end.ogg", t = 20/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_raise.ogg", t = 0/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_magout.ogg", t = 6/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_mvmnt.ogg", t = 12/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_magin.ogg", t = 18/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_maghit.ogg", t = 21/30},
+			{s = path .. "wfoly_pi_papa220_reload_fast_end.ogg", t = 27/30},
         },
     },
     ["reload_fast_empty"] = {
@@ -779,14 +780,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
-            {s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 9/30},
-            {s = path .. "p01_ar_mike4_reload_end.ogg", t = 39/30},
+            {s = path .. "wfoly_pi_papa220_raise.ogg", t = 1/30},
+            {s = path .. "wfoly_pi_papa220_inspect_slidepull.ogg", t = 9/30},
+            {s = path .. "wfoly_pi_papa220_inspect_sliderelease.ogg", t = 18/30},
+            {s = path .. "wfoly_pi_papa220_inspect_sliderelease.ogg", t = 18/30},
+            {s = path .. "wfoly_pi_papa220_inspect_end.ogg", t = 25/30},
         },
     },
     ["draw"] = {
         Source = "draw_short",
-		MinProgress = 0.8,
+		MinProgress = 0.3,
 		FireASAP = true,
         IKTimeLine = {
             {
@@ -801,7 +804,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p01_ar_mike4_raise.ogg", t = 0/30},
+            {s = path .. "wfoly_pi_papa220_raise.ogg", t = 0/30},
         },
     },
     ["holster"] = {
@@ -820,7 +823,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p01_ar_mike4_drop_quick.ogg", t = 0/30},
+            {s = path .. "wfoly_pi_papa220_drop.ogg", t = 0/30},
         },
     },
     ["idle"] = {
@@ -864,7 +867,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 1/30},
+            {s = path .. "wfoly_pi_papa220_inspect_raise.ogg", t = 1/30},
+            {s = path .. "wfoly_pi_papa220_inspect_trigger.ogg", t = 17/30},
+            {s = path .. "wfoly_pi_papa220_inspect_magout.ogg", t = 50/30},
+            {s = path .. "wfoly_pi_papa220_inspect_magin.ogg", t = 78/30},
+            {s = path .. "wfoly_pi_papa220_inspect_maghit.ogg", t = 86/30},
+            {s = path .. "wfoly_pi_papa220_inspect_rotate.ogg", t = 92/30},
+            {s = path .. "wfoly_pi_papa220_inspect_slidepull.ogg", t = 101/30},
+            {s = path .. "wfoly_pi_papa220_inspect_sliderelease.ogg", t = 116/30},
+            {s = path .. "wfoly_pi_papa220_inspect_triggerpull.ogg", t = 129/30},
+            {s = path .. "wfoly_pi_papa220_inspect_end.ogg", t = 140/30},
         },
     },
 	["inspect_empty"] = {
