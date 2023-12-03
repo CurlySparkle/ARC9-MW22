@@ -126,8 +126,8 @@ SWEP.RecoilMultSights = 0.85
 -------------------------- VISUAL RECOIL
 
 SWEP.UseVisualRecoil = true
-SWEP.VisualRecoilMultSights = 0.3
-SWEP.VisualRecoilPunchSights = 75
+SWEP.VisualRecoilMultSights = 0.2
+SWEP.VisualRecoilPunchSights = 35
 SWEP.VisualRecoilUpSights = 0
 SWEP.VisualRecoilSideSights = 0.2
 
@@ -197,7 +197,7 @@ SWEP.IronSights = {
 	CrosshairInSights = false
 }
 
-SWEP.ViewModelFOVBase = 65
+SWEP.ViewModelFOVBase = 63
 
 SWEP.SprintPos = Vector(-1, -1, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
@@ -304,36 +304,37 @@ SWEP.EnterSightsSound = path .. "wfoly_ar_mike4_ads_up.ogg"
 SWEP.ExitSightsSound = path .. "wfoly_ar_mike4_ads_down.ogg"
 
 SWEP.BulletBones = {
-    [1] = "j_bullet_01",
-    [2] = "j_bullet_02",
-    [3] = "j_bullet_03",
-    [4] = "j_bullet_04",
-    [5] = "j_bullet_05",
-    [6] = "j_bullet_06",
-    [7] = "j_bullet_07",
-    [8] = "j_bullet_08",
-    [9] = "j_bullet_09",
-    [10] = "j_bullet_11",
-    [11] = "j_bullet_12",
-    [12] = "j_bullet_13",
-    [13] = "j_bullet_14",
-    [14] = "j_bullet_15",
-    [15] = "j_bullet_16",
-    [16] = "j_bullet_17",
-    [17] = "j_bullet_18",
-    [18] = "j_bullet_19",
-    [19] = "j_bullet_20",
-    [20] = "j_bullet_21",
-    [21] = "j_bullet_22",
-    [22] = "j_bullet_23",
-    [23] = "j_bullet_23",
-    [24] = "j_bullet_24",
-    [25] = "j_bullet_25",
-    [26] = "j_bullet_26",
-    [27] = "j_bullet_27",
-    [28] = "j_bullet_28",
-    [29] = "j_bullet_29",
-    [30] = "j_bullet_30",
+    [1] = "j_ammo_01",
+    [2] = "j_ammo_02",
+    [3] = "j_ammo_03",
+    [4] = "j_ammo_04",
+    [5] = "j_ammo_05",
+    [6] = "j_ammo_06",
+    [7] = "j_ammo_07",
+    [8] = "j_ammo_08",
+    [9] = "j_ammo_09",
+    [10] = "j_ammo_10",
+    [11] = "j_ammo_11",
+    [12] = "j_ammo_12",
+    [13] = "j_ammo_13",
+    [14] = "j_ammo_14",
+    [15] = "j_ammo_15",
+    [16] = "j_ammo_16",
+    [17] = "j_ammo_17",
+    [18] = "j_ammo_18",
+    [19] = "j_ammo_19",
+    [20] = "j_ammo_20",
+    [21] = "j_ammo_21",
+    [22] = "j_ammo_22",
+    [23] = "j_ammo_23",
+    [24] = "j_ammo_24",
+    [25] = "j_ammo_25",
+    [26] = "j_ammo_26",
+    [27] = "j_ammo_27",
+    [28] = "j_ammo_28",
+    [29] = "j_ammo_29",
+    [30] = "j_ammo_30",
+    [31] = "j_ammo_31"
 }
 
 SWEP.HideBones  = {
@@ -900,8 +901,51 @@ SWEP.Animations = {
 			{s = path .. "p01_ar_mike4_inspect_end.ogg", t = 131/30},
         },
     },
+    ["inspect_empty"] = {
+        Source = "lookat01_empty",
+        MinProgress = 0.1,
+        FireASAP = true,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1.2,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+        EventTable = {
+            {s = path .. "p01_ar_mike4_inspect_lift.ogg", t = 0/30},
+			{s = path .. "p01_ar_mike4_reload_magout.ogg", t = 34/30},
+			{s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 73/30},
+			{s = path .. "p01_ar_mike4_inspect_boltclose.ogg", t = 78/30},
+			{s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 81/30},
+			{s = path .. "p01_ar_mike4_inspect_boltclose.ogg", t = 86/30},
+			{s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 89/30},
+			{s = path .. "p01_ar_mike4_inspect_boltclose.ogg", t = 94/30},
+			{s = path .. "p01_ar_mike4_reload_maghit.ogg", t = 125/30},
+			{s = path .. "p01_ar_mike4_reload_magin.ogg", t = 129/30},
+			{s = path .. "p01_ar_mike4_inspect_rotate.ogg", t = 138/30},
+			{s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 151/30},
+			{s = path .. "p01_ar_mike4_inspect_boltclose.ogg", t = 170/30},
+			{s = path .. "p01_ar_mike4_inspect_end.ogg", t = 180/30},
+        },
+    },
     ["bash"] = {
-        Source = {"melee", "melee2", "melee3"},
+        Source = {"melee_hit_01", "melee_hit_02", "melee_hit_03"},
         IKTimeLine = {
             {
                 t = 0,
@@ -1122,7 +1166,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optics",
         Bone = "tag_holo",
-        Pos = Vector(1.5, 0, -0.1),
+        Pos = Vector(0.5, 0, -0.1),
         Ang = Angle(0, 0, 0),
         Category = {"cod2019_optic","cod2019_sights_m4"},
         CorrectiveAng = Angle(0, 0, 0),
@@ -1133,7 +1177,7 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Category = "cod2019_muzzle",
         Bone = "tag_silencer",
-        Pos = Vector(0, 0, -1.15),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
 		InstalledElements = {"muzzle_none"},
 		Scale = 1,
@@ -1143,15 +1187,15 @@ SWEP.Attachments = {
         DefaultAttName = "Default",
         Category = "cod2019_tac",
         Bone = "tag_laser_attach",
-        Pos = Vector(6.7, 0.97, -2.5),
-        Ang = Angle(0, 0, -90),
+        Pos = Vector(1.5, 0, 0),
+        Ang = Angle(0, 0, 180),
     },
     {
         PrintName = "Grips",
         DefaultAttName = "Default",
         Category = {"cod2019_grip","cod2019_grip_cclamp"},
         Bone = "tag_grip_attach",
-        Pos = Vector(-1, 0, -1.5),
+        Pos = Vector(2.2, 0, 0),
         Ang = Angle(0, 0, 180),
 		Scale = 1,
     },

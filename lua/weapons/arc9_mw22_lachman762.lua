@@ -708,11 +708,11 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 1.5,
+        Time = 1.2,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 1.5,
+        Time = 1.2,
     },
     ["inspect"] = {
         Source = "lookat01",
@@ -955,7 +955,7 @@ SWEP.Attachments = {
         DefaultAttName = "Default",
         Category = "cod2019_grip",
         Bone = "tag_grip_attach",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(0.5, 0, 0),
         Ang = Angle(0, 0, 180),
 		Scale = 1,
 		InstalledElements = {"rail_grip"},
