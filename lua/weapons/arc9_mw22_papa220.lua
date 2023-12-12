@@ -336,7 +336,7 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-		MinProgress = 0.8,
+		MinProgress = 0.9,
 		FireASAP = true,
         IKTimeLine = {
             {
@@ -371,7 +371,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-		MinProgress = 0.8,
+		MinProgress = 0.9,
 		FireASAP = true,
 		DropMagAt = 0.39,
         IKTimeLine = {
@@ -409,7 +409,7 @@ SWEP.Animations = {
     },
     ["reload_fast"] = {
         Source = "reload_fast",
-		MinProgress = 0.8,
+		MinProgress = 0.9,
 		FireASAP = true,
 		DropMagAt = 0.38,
         IKTimeLine = {
@@ -445,7 +445,7 @@ SWEP.Animations = {
     },
     ["reload_fast_empty"] = {
         Source = "reload_fast_empty",
-		MinProgress = 0.8,
+		MinProgress = 0.9,
 		FireASAP = true,
 		DropMagAt = 0.4,
         IKTimeLine = {
@@ -480,7 +480,7 @@ SWEP.Animations = {
     },
     ["reload_xmag"] = {
         Source = "reload_xmag",
-		MinProgress = 0.8,
+		MinProgress = 0.9,
 		FireASAP = true,
         IKTimeLine = {
             {
@@ -514,7 +514,7 @@ SWEP.Animations = {
     },
     ["reload_xmag_empty"] = {
         Source = "reload_xmag_empty",
-		MinProgress = 0.8,
+		MinProgress = 0.9,
 		FireASAP = true,
 		DropMagAt = 0.39,
         IKTimeLine = {
@@ -550,7 +550,7 @@ SWEP.Animations = {
     },
     ["reload_xmag_fast"] = {
         Source = "reload_xmag_fast",
-		MinProgress = 0.8,
+		MinProgress = 0.9,
 		FireASAP = true,
 		DropMagAt = 0.5,
         IKTimeLine = {
@@ -586,7 +586,7 @@ SWEP.Animations = {
     },
     ["reload_xmag_fast_empty"] = {
         Source = "reload_xmag_fast_empty",
-		MinProgress = 0.8,
+		MinProgress = 0.9,
 		FireASAP = true,
 		DropMagAt = 0.5,
         IKTimeLine = {
@@ -621,7 +621,7 @@ SWEP.Animations = {
     },
     ["reload_xmaglrg"] = {
         Source = "reload_xmaglrg",
-		MinProgress = 0.8,
+		MinProgress = 0.9,
 		FireASAP = true,
         IKTimeLine = {
             {
@@ -655,7 +655,7 @@ SWEP.Animations = {
     },
     ["reload_xmaglrg_empty"] = {
         Source = "reload_xmaglrg_empty",
-		MinProgress = 0.8,
+		MinProgress = 0.9,
 		FireASAP = true,
 		DropMagAt = 0.39,
         IKTimeLine = {
@@ -691,7 +691,7 @@ SWEP.Animations = {
     },
     ["reload_xmaglrg_fast"] = {
         Source = "reload_xmaglrg_fast",
-		MinProgress = 0.8,
+		MinProgress = 0.9,
 		FireASAP = true,
 		DropMagAt = 0.5,
         IKTimeLine = {
@@ -728,7 +728,7 @@ SWEP.Animations = {
     },
     ["reload_xmaglrg_fast_empty"] = {
         Source = "reload_xmaglrg_fast_empty",
-		MinProgress = 0.8,
+		MinProgress = 0.9,
 		FireASAP = true,
 		DropMagAt = 0.5,
         IKTimeLine = {
@@ -764,7 +764,7 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "draw",
-		MinProgress = 0.6,
+		MinProgress = 0.7,
 		FireASAP = true,
         IKTimeLine = {
             {
