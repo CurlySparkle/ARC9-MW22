@@ -267,6 +267,7 @@ SWEP.DropMagazineAng = Angle(0, -90, 0)
 -------------------------- SOUNDS
 
 local path = "weapons/cod2019/ax50/"
+local path2 = "weapons/mw22/imperium/"
 
 SWEP.ShootSound = "MW22.Imperium.Fire"
 SWEP.ShootSoundIndoor = "MW22.Imperium.Fire"
@@ -313,15 +314,15 @@ end
 
 SWEP.Animations = {
     ["fire"] = {
-        Source = "shoot1",
+        Source = "fire",
     },
     ["cycle"] = {
         Source = "fire_rechamber",
 		--EjectAt = 0.2,
 		MinProgress = 0.8,
         EventTable = {
-            {s = "COD2019.AX50.Rechamber", v = 0.4, t = 6/30},
-			{s = path .. "wfoly_sn_alpha50_rechamber_02.ogg", v = 0.4, t = 19/30},
+            {s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 8/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 20/30},
         },
     },
     ["reload"] = {
@@ -350,13 +351,11 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_sn_alpha50_reload_raise.ogg", t = 0/30},
-			{s = path .. "wfoly_sn_alpha50_reload_magout_01.ogg", t = 18/30},
-			{s = path .. "wfoly_sn_alpha50_reload_arm.ogg", t = 40/30},
-			{s = path .. "wfoly_sn_alpha50_reload_maghit.ogg", t = 57/30},
-			{s = path .. "wfoly_sn_alpha50_reload_magin_v2_01.ogg", t = 62/30},
-			{s = path .. "wfoly_sn_alpha50_reload_magin_v2_02.ogg", t = 66/30},
-			{s = path .. "wfoly_sn_alpha50_reload_end.ogg", t = 68/30},
+			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 5/30},
+			{s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 33/30},
+			{s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 60/30},
+			{s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 80/30},
+			{s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 95/30},
         },
     },
     ["reload_empty"] = {
@@ -392,21 +391,20 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_sn_alpha50_reload_empty_boltopen_01.ogg", t = 0/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_maggrab.ogg", t = 22/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_magout_01.ogg", t = 35/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_arm.ogg", t = 55/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_magin_v2_01.ogg", t = 73/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_magin_v2_02.ogg", t = 82/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_maghit_01.ogg", t = 92/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_boltclose_01.ogg", t = 110/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_end.ogg", t = 108/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 5/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 26/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 57/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 85/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 102/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 117/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 125/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 137/30},
         },
     },
     ["reload_fast"] = {
         Source = "reload_fast",
 		MinProgress = 0.8,
-		DropMagAt = 0.8,
+		DropMagAt = 1.5,
         IKTimeLine = {
             {
                 t = 0,
@@ -430,13 +428,12 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_sn_alpha50_reload_raise.ogg", t = 0/30},
-			{s = path .. "wfoly_sn_alpha50_reload_magout_01.ogg", t = 9/30},
-			{s = path .. "wfoly_sn_alpha50_reload_arm.ogg", t = 20/30},
-			{s = path .. "wfoly_sn_alpha50_reload_maghit.ogg", t = 32/30},
-			{s = path .. "wfoly_sn_alpha50_reload_magin_v2_01.ogg", t = 35/30},
-			{s = path .. "wfoly_sn_alpha50_reload_magin_v2_02.ogg", t = 39/30},
-			{s = path .. "wfoly_sn_alpha50_reload_end.ogg", t = 46/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 2/30},
+			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 11/30},
+			{s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 20/30},
+			{s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 45/30},
+			{s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 60/30},
+			{s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 70/30},
         },
     },
     ["reload_fast_empty"] = {
@@ -472,15 +469,15 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_sn_alpha50_reload_empty_boltopen_01.ogg", t = 0/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_maggrab.ogg", t = 20/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_magout_01.ogg", t = 26/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_arm.ogg", t = 34/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_magin_v2_01.ogg", t = 48/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_magin_v2_02.ogg", t = 53/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_maghit_01.ogg", t = 57/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_boltclose_01.ogg", t = 69/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_end.ogg", t = 79/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 8/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 27/30},
+			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 33/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 50/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 65/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 86/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 101/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 108/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 122/30},
         },
     },
     ["reload_xmag"] = {
@@ -657,13 +654,15 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_sn_alpha50_raise_first.ogg", t = 7/30},
-			{s = path .. "wfoly_sn_alpha50_raise_first_boltclose_01.ogg", t = 14/30},
+            {s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 7/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 7/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 18/30},
+			{s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 33/30},
         },
     },
     ["draw"] = {
         Source = "draw_short",
-		MinProgress = 0.8,
+		MinProgress = 0.7,
 		FireASAP = true,
         IKTimeLine = {
             {
@@ -678,7 +677,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_sn_alpha50_raise.ogg", t = 0/30},
+            {s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 0/30},
         },
     },
     ["holster"] = {
@@ -696,7 +695,7 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_sn_alpha50_drop.ogg", t = 0/30},
+            {s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 0/30},
         },
     },
     ["idle"] = {
@@ -707,11 +706,11 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-		Mult = 2.5,
+		Mult = 2,
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-		Mult = 2.5,
+		Mult = 2,
     },
     ["inspect"] = {
         Source = "lookat01",
@@ -740,9 +739,16 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = path .. "wfoly_sn_alpha50_inspect_01.ogg", t = 0/30},
-			{s = path .. "wfoly_sn_alpha50_inspect_02.ogg", t = 48/30},
-			{s = path .. "wfoly_sn_alpha50_inspect_03.ogg", t = 117/30},
+            {s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 0/30},
+            {s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 10/30},
+            {s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 113/30},
+            {s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 148/30},
+            {s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 180/30},
+            {s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 195/30},
+            {s = path2 .. "p21_sn_mromeo_reload_rotate.ogg", t = 213/30},
+            {s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 243/30},
+            {s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 272/30},
+            {s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 291/30},
         },
     },
     ["inspect_empty"] = {
@@ -771,14 +777,21 @@ SWEP.Animations = {
                 rhik = 1
             },
         },
-        EventTable = {
-            {s = path .. "wfoly_sn_alpha50_inspect_01.ogg", t = 0/30},
-			{s = path .. "wfoly_sn_alpha50_inspect_02.ogg", t = 48/30},
-			{s = path .. "wfoly_sn_alpha50_inspect_03.ogg", t = 117/30},
-        },
+        -- EventTable = {
+            -- {s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 0/30},
+            -- {s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 10/30},
+            -- {s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 113/30},
+            -- {s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 148/30},
+            -- {s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 180/30},
+            -- {s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 195/30},
+            -- {s = path2 .. "p21_sn_mromeo_reload_rotate.ogg", t = 213/30},
+            -- {s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 243/30},
+            -- {s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 272/30},
+            -- {s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 291/30},
+        -- },
     },
     ["bash"] = {
-        Source = {"melee_miss_01", "melee_miss_02", "melee_miss_03"},
+        Source = {"melee_hit_01", "melee_hit_02", "melee_hit_03"},
         IKTimeLine = {
             {
                 t = 0,
