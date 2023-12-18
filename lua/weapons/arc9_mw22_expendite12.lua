@@ -20,7 +20,7 @@ SWEP.Trivia = {
 }
 
 SWEP.Credits = {
-    Author = "Twilight Sparkle//Nekyo-ko/Pacagma/Firmeteran",
+    Author = "Twilight Sparkle/Nekyo-ko/Pacagma/Firmeteran",
     Assets = "Infinity Ward/Sledgehammer Games/Activision"
 }
 
