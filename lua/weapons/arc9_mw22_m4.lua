@@ -131,9 +131,9 @@ SWEP.VisualRecoilPunchSights = 35
 SWEP.VisualRecoilUpSights = 0
 SWEP.VisualRecoilSideSights = 0.2
 
-SWEP.VisualRecoilPunch = 3
+SWEP.VisualRecoilPunch = 1.5
 SWEP.VisualRecoilUp = 0.4
-SWEP.VisualRecoilRoll = 25
+SWEP.VisualRecoilRoll = 50
 SWEP.VisualRecoilSide = 0.5
 
 SWEP.VisualRecoilSpringPunchDamping = 11
@@ -898,7 +898,7 @@ SWEP.Animations = {
 			{s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 87/30},
 			{s = path .. "p01_ar_mike4_inspect_boltclose.ogg", t = 110/30},
 			{s = path .. "p01_ar_mike4_inspect_hit.ogg", t = 119/30},
-			{s = path .. "p01_ar_mike4_inspect_end.ogg", t = 131/30},
+			{s = path .. "p01_ar_mike4_inspect_end.ogg", t = 115/30},
         },
     },
     ["inspect_empty"] = {
@@ -941,7 +941,7 @@ SWEP.Animations = {
 			{s = path .. "p01_ar_mike4_inspect_rotate.ogg", t = 138/30},
 			{s = path .. "p01_ar_mike4_inspect_boltpull.ogg", t = 151/30},
 			{s = path .. "p01_ar_mike4_inspect_boltclose.ogg", t = 170/30},
-			{s = path .. "p01_ar_mike4_inspect_end.ogg", t = 180/30},
+			{s = path .. "p01_ar_mike4_inspect_end.ogg", t = 170/30},
         },
     },
     ["bash"] = {

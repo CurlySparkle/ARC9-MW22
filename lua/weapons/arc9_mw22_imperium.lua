@@ -28,7 +28,7 @@ SWEP.Description = [[Engineered destruction at its finest, this anti-personnel, 
 
 SWEP.ViewModel = "models/weapons/mw22/c_snip_imperium.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
-SWEP.DefaultBodygroups = "00000000"
+SWEP.DefaultBodygroups = "00000000000"
 
 SWEP.Slot = 3
 
@@ -219,6 +219,9 @@ SWEP.CustomizeSnapshotFOV = 90
 SWEP.CustomizeNoRotate = false
 SWEP.CustomizeSnapshotPos = Vector(0, 15, 3)
 
+SWEP.PeekPos = Vector(-1, 1.5, -5)
+SWEP.PeekAng = Angle(0, 0.4, -45)
+
 -------------------------- HoldTypes
 
 SWEP.HoldType = "rpg"
@@ -250,7 +253,7 @@ SWEP.EjectDelay = 0.4
 
 SWEP.ShouldDropMag = false
 SWEP.ShouldDropMagEmpty = false
-SWEP.DropMagazineModel = "models/weapons/cod2019/mags/w_snip_ax50_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
+SWEP.DropMagazineModel = "models/weapons/cod2019/mags/w_snip_hdr_mag.mdl" -- Set to a string or table to drop this magazine when reloading.
 SWEP.DropMagazineSounds = {
 "weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_large_drum_concrete_01.ogg",
 "weapons/cod2019/shared/magazine_drops/iw8_phys_mag_drop_large_drum_concrete_02.ogg",
@@ -328,6 +331,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
 		MinProgress = 0.8,
+		DropMagAt = 1.4,
         IKTimeLine = {
             {
                 t = 0,
@@ -430,7 +434,7 @@ SWEP.Animations = {
         EventTable = {
 			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 2/30},
 			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 11/30},
-			{s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 20/30},
+			{s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 15/30},
 			{s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 45/30},
 			{s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 60/30},
 			{s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 70/30},
@@ -440,7 +444,7 @@ SWEP.Animations = {
         Source = "reload_fast_empty",
 		MinProgress = 0.9,
 		EjectAt = 0.35,
-		DropMagAt = 1.4,
+		DropMagAt = 1.55,
         IKTimeLine = {
             {
                 t = 0,
@@ -472,17 +476,18 @@ SWEP.Animations = {
 			{s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 8/30},
 			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 27/30},
 			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 33/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 50/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 38/30},
 			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 65/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 86/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 83/30},
 			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 101/30},
 			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 108/30},
-			{s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 122/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 101/30},
         },
     },
     ["reload_xmag"] = {
         Source = "reload_xmag",
 		MinProgress = 0.8,
+		DropMagAt = 1.5,
         IKTimeLine = {
             {
                 t = 0,
@@ -506,13 +511,11 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_sn_alpha50_reload_raise.ogg", t = 0/30},
-			{s = path .. "wfoly_sn_alpha50_reload_magout_01.ogg", t = 18/30},
-			{s = path .. "wfoly_sn_alpha50_reload_arm.ogg", t = 40/30},
-			{s = path .. "wfoly_sn_alpha50_reload_maghit.ogg", t = 57/30},
-			{s = path .. "wfoly_sn_alpha50_reload_magin_v2_01.ogg", t = 62/30},
-			{s = path .. "wfoly_sn_alpha50_reload_magin_v2_02.ogg", t = 66/30},
-			{s = path .. "wfoly_sn_alpha50_reload_end.ogg", t = 68/30},
+			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 5/30},
+			{s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 33/30},
+			{s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 60/30},
+			{s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 80/30},
+			{s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 95/30},
         },
     },
     ["reload_xmag_empty"] = {
@@ -548,21 +551,20 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_sn_alpha50_reload_empty_boltopen_01.ogg", t = 0/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_maggrab.ogg", t = 22/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_magout_01.ogg", t = 35/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_arm.ogg", t = 55/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_magin_v2_01.ogg", t = 73/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_magin_v2_02.ogg", t = 82/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_maghit_01.ogg", t = 92/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_boltclose_01.ogg", t = 110/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_end.ogg", t = 108/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 5/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 26/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 57/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 85/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 102/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 117/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 125/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 137/30},
         },
     },
     ["reload_xmag_fast"] = {
         Source = "reload_xmag_fast",
 		MinProgress = 0.8,
-		DropMagAt = 0.8,
+		DropMagAt = 1.55,
         IKTimeLine = {
             {
                 t = 0,
@@ -586,20 +588,19 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_sn_alpha50_reload_raise.ogg", t = 0/30},
-			{s = path .. "wfoly_sn_alpha50_reload_magout_01.ogg", t = 9/30},
-			{s = path .. "wfoly_sn_alpha50_reload_arm.ogg", t = 20/30},
-			{s = path .. "wfoly_sn_alpha50_reload_maghit.ogg", t = 32/30},
-			{s = path .. "wfoly_sn_alpha50_reload_magin_v2_01.ogg", t = 35/30},
-			{s = path .. "wfoly_sn_alpha50_reload_magin_v2_02.ogg", t = 39/30},
-			{s = path .. "wfoly_sn_alpha50_reload_end.ogg", t = 46/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 2/30},
+			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 11/30},
+			{s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 15/30},
+			{s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 45/30},
+			{s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 60/30},
+			{s = path2 .. "p21_sn_mromeo_reload_end.ogg", t = 70/30},
         },
     },
     ["reload_xmag_fast_empty"] = {
         Source = "reload_empty_xmag_fast",
 		MinProgress = 0.9,
 		EjectAt = 0.35,
-		DropMagAt = 1.4,
+		DropMagAt = 1.55,
         IKTimeLine = {
             {
                 t = 0,
@@ -628,15 +629,15 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-			{s = path .. "wfoly_sn_alpha50_reload_empty_boltopen_01.ogg", t = 0/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_maggrab.ogg", t = 20/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_magout_01.ogg", t = 26/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_arm.ogg", t = 34/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_magin_v2_01.ogg", t = 48/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_magin_v2_02.ogg", t = 53/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_maghit_01.ogg", t = 57/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_boltclose_01.ogg", t = 69/30},
-			{s = path .. "wfoly_sn_alpha50_reload_empty_end.ogg", t = 79/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 8/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 27/30},
+			{s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 33/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_magout.ogg", t = 38/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle2.ogg", t = 65/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_magin.ogg", t = 83/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 101/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 108/30},
+			{s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 101/30},
         },
     },
     ["ready"] = {
@@ -714,6 +715,45 @@ SWEP.Animations = {
     },
     ["inspect"] = {
         Source = "lookat01",
+        MinProgress = 0.1,
+        FireASAP = true,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.3,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.55,
+                lhik = 1,
+                rhik = 1
+            },
+        },
+        EventTable = {
+            {s = path2 .. "p21_sn_mromeo_reload_empty_grab.ogg", t = 0/30},
+            {s = path2 .. "p21_sn_mromeo_reload_raise.ogg", t = 10/30},
+            {s = path2 .. "p21_sn_mromeo_reload_magout.ogg", t = 113/30},
+            {s = path2 .. "p21_sn_mromeo_reload_empty_rattle.ogg", t = 148/30},
+            {s = path2 .. "p21_sn_mromeo_reload_rattle.ogg", t = 180/30},
+            {s = path2 .. "p21_sn_mromeo_reload_magin.ogg", t = 195/30},
+            {s = path2 .. "p21_sn_mromeo_reload_rotate.ogg", t = 213/30},
+            {s = path2 .. "p21_sn_mromeo_reload_empty_boltback.ogg", t = 243/30},
+            {s = path2 .. "p21_sn_mromeo_reload_empty_boltclose.ogg", t = 272/30},
+            {s = path2 .. "p21_sn_mromeo_reload_empty_end.ogg", t = 291/30},
+        },
+    },
+    ["inspect_xmag"] = {
+        Source = "lookat01_xmag",
         MinProgress = 0.1,
         FireASAP = true,
         IKTimeLine = {
@@ -833,6 +873,8 @@ SWEP.Hook_TranslateAnimation = function (wep, anim)
         return "reload_xmag_fast"
     elseif anim == "reload_empty" and wep:HasElement("perk_speedreload") and wep:HasElement("mag_xmag") then 
         return "reload_xmag_fast_empty"
+    elseif anim == "inspect" and wep:HasElement("mag_xmag") then
+        return "inspect_xmag"
     --------------------------------------------------------------------------------
     elseif anim == "reload" and wep:HasElement("perk_speedreload") then
         return "reload_fast"
@@ -844,10 +886,15 @@ SWEP.Hook_TranslateAnimation = function (wep, anim)
     elseif anim == "reload_empty" and wep:HasElement("mag_extend") then 
         return "reload_xmag_empty"
     --------------------------------------------------------------------------------
+    elseif anim == "inspect" and wep:HasElement("mag_extend") then
+        return "inspect_xmag"
+    --------------------------------------------------------------------------------
     elseif anim == "reload" and wep:HasElement("mag_xmag") then
         return "reload_xmag"
     elseif anim == "reload_empty" and wep:HasElement("mag_xmag") then 
         return "reload_xmag_empty"
+    elseif anim == "inspect" and wep:HasElement("mag_xmag") then
+        return "inspect_xmag"
     end
 end
 
@@ -904,39 +951,54 @@ SWEP.AttachmentElements = {
             {0,1},
         },
     },
-    ["mag_extend"] = {
-        Bodygroups = {
-            {1,1},
-        },
-    },
-    ["mag_none"] = {
+    ["bipod_none"] = {
         Bodygroups = {
             {1,2},
         },
     },
-    ["muzzle_none"] = {
-        Bodygroups = {
-            {2,1},
-        },
-    },
-    ["guard_none"] = {
+    ["mag_extend"] = {
         Bodygroups = {
             {3,1},
         },
     },
-    ["sight_none"] = {
+    ["mag_none"] = {
+        Bodygroups = {
+            {3,2},
+        },
+    },
+    ["barrel_none"] = {
         Bodygroups = {
             {4,1},
         },
     },
-    ["stock_none"] = {
+    ["muzzle_none"] = {
         Bodygroups = {
-            {5,2},
+            {5,1},
         },
     },
-    ["stock_main_none"] = {
+    ["bolt_none"] = {
         Bodygroups = {
             {6,1},
+        },
+    },
+    ["grip_none"] = {
+        Bodygroups = {
+            {7,1},
+        },
+    },
+    ["guard_none"] = {
+        Bodygroups = {
+            {8,1},
+        },
+    },
+    ["stock_retract"] = {
+        Bodygroups = {
+            {9,1},
+        },
+    },
+    ["stock_none"] = {
+        Bodygroups = {
+            {9,2},
         },
     },
 }
@@ -944,8 +1006,7 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local model = data.model
     if wep:HasElement("stock_retract") then 
-	model:SetBodygroup(5,0)
-	model:SetBodygroup(6,0)	
+	model:SetBodygroup(9,1)
 	end
 end
 
@@ -953,7 +1014,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrels",
         DefaultAttName = "Standard Barrel",
-        Category = "cod2019_ax50_barrel",
+        Category = "mw22_imperium_barrel",
         Bone = "tag_barrel_attach",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -965,7 +1026,7 @@ SWEP.Attachments = {
         Bone = "tag_silencer",
         Pos = Vector(-0.23, 0, 0),
         Ang = Angle(0, 0, 0),
-		InstalledElements = {""},
+		InstalledElements = {"muzzle_none"},
 		Scale = 1,
     },
     {
@@ -975,7 +1036,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"cod2019_optic","cod2019_optic_ax50"},
         CorrectiveAng = Angle(0, 0, 0),
-		InstalledElements = {""},
+		--InstalledElements = {""},
 		--Installed = "cod2019_optic_scope_ax50",
         --Integral = "cod2019_optic_scope_ax50",
     },
@@ -984,29 +1045,29 @@ SWEP.Attachments = {
         DefaultAttName = "Default",
         Category = "cod2019_tac",
         Bone = "tag_laser_attach",
-        Pos = Vector(0, 0, -0.1),
-        Ang = Angle(0, 0, 180),
+        Pos = Vector(-2.5, -0.5, 0),
+        Ang = Angle(0, 0, -90),
 		--InstalledElements = {"rail_laser"},
     },
     {
         PrintName = "Stock",
         DefaultAttName = "Standard Stock",
-        Category = "cod2019_tube",
+        Category = {"mw22_imperium_stock","stock_retract"},
         Bone = "tag_stock_attach",
-        Pos = Vector(0.9, 0, -0.05),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-		InstalledElements = {"",""},
+		--InstalledElements = {"",""},
 		Scale = 1,
     },
     {
-        PrintName = "Grips",
+        PrintName = "Guard",
         DefaultAttName = "Default",
-        Category = "cod2019_grip",
+        Category = "mw22_imperium_guard",
         Bone = "tag_sling",
         Pos = Vector(16, 0, -1.1),
         Ang = Angle(0, 0, 180),
 		Scale = 1,
-		InstalledElements = {""},
+		--InstalledElements = {""},
     },
     {
         PrintName = "Ammo",
@@ -1018,7 +1079,7 @@ SWEP.Attachments = {
     {
         PrintName = "Mag",
 		Bone = "j_mag1",
-        Category = {"cod2019_mag","cod2019_ax50_mag"},
+        Category = {"cod2019_mag","mw22_imperium_mag"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
@@ -1029,7 +1090,7 @@ SWEP.Attachments = {
     {
         PrintName = "Skins",
         --Bone = "v_weapon.Clip",
-        Category = "cod2019_skins_vlk",
+        Category = "mw22_imperium_skins",
 		CosmeticOnly = true,
     },
     {
@@ -1039,22 +1100,17 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/snip_ax50_decal_a.mdl",
+        StickerModel = "models/weapons/mw22/stickers/snip_imperium_decal_a.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/snip_ax50_decal_b.mdl",
+        StickerModel = "models/weapons/mw22/stickers/snip_imperium_decal_b.mdl",
         Category = "stickers",
     },
     {
         PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/snip_ax50_decal_c.mdl",
-        Category = "stickers",
-    },
-    {
-        PrintName = "Stickers",
-        StickerModel = "models/weapons/cod2019/stickers/snip_ax50_decal_d.mdl",
+        StickerModel = "models/weapons/mw22/stickers/snip_imperium_decal_c.mdl",
         Category = "stickers",
     },
     {
