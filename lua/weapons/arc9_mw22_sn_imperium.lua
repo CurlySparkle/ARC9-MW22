@@ -935,7 +935,7 @@ SWEP.Attachments = {
         CorrectiveAng = Angle(0, 0, 0),
 		--InstalledElements = {""},
 		Installed = "mw22_optic_default_imperium",
-        --Integral = "mw2022_optic_imperium",
+        Integral = "mw22_optic_default_imperium",
     },
     { -- 5
         PrintName = ARC9:GetPhrase("mw19_category_stock"),
